@@ -1,29 +1,64 @@
 .Cover{
-    height: 1224px;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px black solid; */
 }
 .wrapperPwImg{
-    position: absolute;
-    left: 75px;
-    top: 39px;
+    margin-left: 75px;
+    margin-top: 39px;
     width: 650px;
     height: 822px;
+    /* border: #1F2A36 1px solid; */
 }
 .BG{
-    position: absolute;
+    position: relative;
     width: 650px;
     height: 822px;
+    margin-top: 0px;
 }
 .Mask{
-    position: absolute;
+    position: relative;
     opacity: 0.4;
+    margin-top: -852px;
     width: 650px;
     height: 822px;
 }
 .Mask1{
-    position: absolute;
+    position: relative;
     opacity: 0.4;
+    margin-top: -900px;
     width: 650px;
     height: 822px;
+}
+.logopee{
+    position: absolute;
+    top: 75px;
+    left: 135px;
+    
+    opacity: 1;
+        /* border: #1F2A36 1px solid; */
+    }
+.peeworld{
+    position: absolute;
+    left: 165px;
+    top: 75px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    }
+.text2{
+    position: absolute;
+    left: 135px;
+    top: 280px;
+    width: 456px;
+    height: 280px;
+}
+.text2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 70px;
+    color: white;
 }
 .Logo{
     position: relative;
