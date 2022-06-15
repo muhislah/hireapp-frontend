@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../../component/module/Footer/Footer'
 import Header from '../../component/module/Header/Header'
 import style from './style.module.css'
@@ -8,9 +8,12 @@ import mail from './mail.svg'
 import instagram from './instagram.svg'
 import github from './github.svg'
 import gitlab from './gitlab.svg'
-import exporto from './exporto.png'
+import { Outlet } from 'react-router'
+import tokped from './tokped.png'
+
 
 const Profile = () => {
+   const [active, setActive] = useState('portfolio')
   return (
     <>
       <Header />
@@ -41,33 +44,20 @@ const Profile = () => {
                <div  className='mb-2'><img src={gitlab} alt=""/><span className='text-muted ml-3'>@Louistommo91</span></div>
             </div>
             <div className={style.menu+' mt-5'}>
-               <button selected="true">Portfolio</button>
-               <button>Pengalaman Kerja</button>
-               <div className={style.portfolios+' d-flex pt-5 pb-5 flex-wrap'}>
-                  <div className={style.portfolio+' d-flex align-items-center flex-column'}>
-                     <img src={exporto} alt="portfolio" />
-                     <p>Remainder app</p>
+               <button className={active === 'portfolio' ? style.active : ""} onClick={() => setActive('portfolio')}>Portfolio</button>
+               <button className={active === 'experience' ? style.active : ""} onClick={() => setActive('experience')}>Pengalaman Kerja</button>
+               <Outlet />
+               <div className='d-flex mt-5 mb-5 flex-column'>
+                  <div className={style.experience+' d-flex flex-row my-2'}>
+                     <img src={tokped} alt="tokped"/>
+                     <div className='d-flex flex-column ml-5'>
+                        <p className="font-weight-bold" >Engineer</p>
+                        <p className="text-muted">Tokopedia</p>
+                        <p className="text-muted">July 2019 - Januari 2020<span>6 Monts</span></p>
+                        <p className={style.desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.</p>
+                     </div>
                   </div>
-                  <div className={style.portfolio+' d-flex align-items-center flex-column'}>
-                     <img src={exporto} alt="portfolio" />
-                     <p>Remainder app</p>
-                  </div>
-                  <div className={style.portfolio+' d-flex align-items-center flex-column'}>
-                     <img src={exporto} alt="portfolio" />
-                     <p>Remainder app</p>
-                  </div>
-                  <div className={style.portfolio+' d-flex align-items-center flex-column'}>
-                     <img src={exporto} alt="portfolio" />
-                     <p>Remainder app</p>
-                  </div>
-                  <div className={style.portfolio+' d-flex align-items-center flex-column'}>
-                     <img src={exporto} alt="portfolio" />
-                     <p>Remainder app</p>
-                  </div>
-                  <div className={style.portfolio+' d-flex align-items-center flex-column'}>
-                     <img src={exporto} alt="portfolio" />
-                     <p>Remainder app</p>
-                  </div>
+                 
                   
                </div>
             </div>

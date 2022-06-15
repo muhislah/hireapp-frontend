@@ -72,10 +72,26 @@ p > img {
    background: none;
    margin-right:15px;
  }
- .menu > button[selected="true"] {
+ .menu > button:focus{
+  border: none;
+  outline: none;
+ }
+
+.menu > button.active{
    border-bottom: 2px solid #5E50A1;
    font-weight: 700;
  }
- .portfolios {
-   justify-content: space-between;
- }
+
+
+.experience img {
+   width: 74px;
+   max-width: 74px;
+   height: 74px;
+   max-height: 74px;
+}
+.experience p {
+   margin: 3px;
+}
+.experience .desc {
+   font-size: 12px;
+}

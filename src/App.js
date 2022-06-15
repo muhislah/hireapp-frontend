@@ -1,10 +1,10 @@
 import './App.css';
-import Profile from './page/profile/Profile';
+import Edit from './page/editprofile/Edit';
 
 function App() {
   return (
     <>
-      <Profile />
+      <Edit />
     </>
    
   );
