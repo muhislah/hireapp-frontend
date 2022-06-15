@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Footer from '../../component/module/Footer/Footer'
-import Header from '../../component/module/Header/Header'
+import Footer from '../../Components/module/Footer/Footer'
+import Header from '../../Components/module/Header/Header'
 import style from './style.module.css'
 import edit from './edit.svg'
 import photo from './photo.png'
