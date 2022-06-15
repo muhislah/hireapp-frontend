@@ -6,12 +6,14 @@ import Card from '../../Components/module/Card/Card'
 import Footer from '../../Components/module/Footer/Footer'
 import Pagination from '../../Components/module/Pagination/Pagination'
 import { employeeAction } from '../../Configs/redux/actions/employeeAction'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 const Home = () => {
+   const dispatch = useDispatch()
    const [rotate, setRotate] = useState(false)
    useEffect(() => {
-      
+      dispatch(employeeAction())
    })
   return (
     <>
