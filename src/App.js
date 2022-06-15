@@ -1,5 +1,5 @@
 import './App.css';
-import Edit from './page/editprofile/Edit';
+import Edit from './Pages/editprofile/Edit';
 
 function App() {
   return (
