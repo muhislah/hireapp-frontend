@@ -1,0 +1,168 @@
+.Box{
+    position: absolute;
+    width: 1140px;
+    height: 960px;
+    left: 190px;
+    top: 170px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 10px 50px rgba(132, 132, 132, 0.25);
+    /* border: 1px black solid; */
+}
+.Head{
+    position: absolute;
+    width: 1140px;
+    height: 200px;
+    background: #5E50A1;
+    border-radius: 8px 8px 0px 0px;
+}
+.Ellipse{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 1px black solid;
+    border-radius: 50%;
+    left: 495px;
+    top: 114px;
+}
+.Content{
+    position: relative;
+    right: 230px;
+    top: 170px;
+    width: 614px;
+    height: 614px;
+    /* border: 1px solid black; */
+}
+.CompanyName{
+    margin-left: auto;
+    margin-right: auto;
+    width: 254px;
+    height: 56px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 56px;
+    color: #1F2A36;
+}
+.CompanyRole{
+    margin-left: auto;
+    margin-right: auto;
+    width: 58px;
+    height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1F2A36;
+}
+.WrapperLoct{
+    margin-left: auto;
+    margin-right: auto;
+    width: 196px;
+    height: 20px;
+}
+.MapsIcon{
+    color: #9EA0A5;
+    margin-right: 10px;
+}
+.CompanyAdress{
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9EA0A5;
+}
+.Desciption{
+    margin-left: auto;
+    margin-right: auto;
+    width: 614px;
+    height: 48px;
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #9EA0A5;
+}
+.btn{
+    position: absolute;
+    width: 297px;
+    height: 50px;
+    left: -70px;
+    top: 476px;
+    border: none;
+    background: #5E50A1;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.SocialMedia{
+    margin-top: -50px;
+    margin-left: -65px;
+    width: 297px;
+    height: 250px;
+    /* border: 1px solid black; */
+}
+.Email{
+    margin-left: auto;
+    margin-right: auto;
+    width: 187px;
+    height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9EA0A5;
+}
+.Instagram{
+    margin-left: auto;
+    margin-right: auto;
+    width: 114px;
+    height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9EA0A5;
+}
+.Phone{
+    margin-left: auto;
+    margin-right: auto;
+    width: 126px;
+    height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9EA0A5;
+}
+.LinkedIn{
+    margin-left: auto;
+    margin-right: auto;
+    width: 152px;
+    height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9EA0A5;
+}
+.footer{
+    position: absolute;
+    top: 1400px;
+    width: 100%;
+}

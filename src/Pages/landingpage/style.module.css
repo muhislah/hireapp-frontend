@@ -1,0 +1,25 @@
+.container {
+   width: 80%;
+   margin: 70px auto;
+}
+.section {
+   margin-bottom: 70px;
+}
+.review {
+   height: 200px;
+   background: #E5E5E5;;
+}
+.button {
+   width: 210px;
+   height: 60px;
+   background-color: #5E50A1;
+   color: white;
+   border-radius: 4px;
+   border: none;
+   cursor: pointer;
+}
+.white {
+   background-color: white;
+   color: #5E50A1;
+   border: 1px solid #5E50A1
+}

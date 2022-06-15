@@ -1,0 +1,68 @@
+.Container{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(132, 132, 132, 0.25);
+}
+.Logo{
+    position: absolute;
+    width: 127px;
+    height: 35px;
+    left: 150px;
+    top: 33px;
+}
+.Component{
+    position: absolute;
+    right: 148.26px;
+    top: 34px;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: #9B9B9B;
+}
+.NotifIcon{
+    padding-right: 80px;
+    width: 20px;
+    height: 20px;
+}
+.MessageIcon{
+    padding-right: 80px;
+    width: 20px;
+    height: 20px;
+}
+.ProfilIcon{
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 800px){
+    .Logo{
+        margin-left: -120px;
+    }
+    .list{
+        margin-right: -120px;
+    }
+    .NotifIcon{
+        padding-right: 30px;
+        width: 20px;
+        height: 20px;
+    }
+    .MessageIcon{
+        padding-right: 30px;
+        width: 20px;
+        height: 20px;
+    }
+    .ProfilIcon{
+        border: 1px solid black;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+}
+
