@@ -1,0 +1,123 @@
+.Cover{
+    height: 900px;
+}
+.wrapperPwImg{
+    position: absolute;
+    left: 75px;
+    top: 39px;
+    width: 650px;
+    height: 822px;
+}
+.BG{
+    position: absolute;
+    width: 650px;
+    height: 822px;
+}
+.Mask{
+    position: absolute;
+    opacity: 0.4;
+    width: 650px;
+    height: 822px;
+}
+.Mask1{
+    position: absolute;
+    opacity: 0.4;
+    width: 650px;
+    height: 822px;
+}
+.Logo{
+    position: relative;
+    left: 44px;
+    top: 44px;
+}
+.text{
+    position: absolute;
+    left: 74px;
+    top: 47px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.wrapperText{
+    position: absolute;
+    left: 65px;
+    top: 241px;
+    width: 456px;
+    height: 280px;
+}
+.text2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 70px;
+    color: white;
+}
+.halo{
+    position: absolute;
+    width: 471px;
+    height: 44px;
+    left: 795px;
+    top: 145px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    line-height: 44px;
+    color: #1F2A36;
+}
+.lorem{
+    position: absolute;
+    width: 570px;
+    height: 50px;
+    left: 795px;
+    top: 205px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #46505C;
+}
+.wrapperEmail{
+    height: 90px;
+    width: 570px;
+    position: absolute;
+    left: 795px;
+    top: 277px;
+    color: #9EA0A5;
+    font-size: 12px;
+    /* border: 1px black solid; */
+}
+.inpEmail{
+    position: absolute;
+    top: 20px;
+    padding-left: 15px;
+    height: 50px;
+    width: 570px;
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    background: #FFFFFF;
+    border: 1px solid #E2E5ED;
+    border-radius: 4px;
+}
+.wrapperPassword{
+    height: 90px;
+    width: 570px;
+    position: absolute;
+    left: 795px;
+    top: 379px;
+    color: #9EA0A5;
+    font-size: 12px;
+}
+.btnLogin{
+    position: absolute;
+    width: 570px;
+    height: 50px;
+    right: 75px;
+    top: 536px;
+    background: #FBB017;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+}
