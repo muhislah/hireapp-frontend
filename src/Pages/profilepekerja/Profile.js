@@ -15,6 +15,7 @@ import { detailEmployeeAction } from '../../Configs/redux/actions/detailEmployee
 const Profile = () => {
    useEffect(() => {
       dispatch(detailEmployeeAction(idemployee))
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    },[])
 
    const navigate = useNavigate()

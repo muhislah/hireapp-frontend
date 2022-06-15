@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import Header from '../../Components/module/Header/Header'
 import Footer from '../../Components/module/Footer/Footer'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { companyAction } from '../../Configs/redux/actions/companyAction'
 
@@ -15,6 +15,7 @@ const ProfileRecuiter = () => {
     const navigate = useNavigate()
     useEffect(() => {
         dispatch(companyAction(token))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
   return (
     <Fragment>

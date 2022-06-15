@@ -3,7 +3,7 @@ import style from './style.module.css'
 import logo from './Logo.svg'
 import Navbar from '../Navbar/Navbar';
 import { useNavigate } from 'react-router';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { employeeAction } from '../../../Configs/redux/actions/employeeAction';
 
 
