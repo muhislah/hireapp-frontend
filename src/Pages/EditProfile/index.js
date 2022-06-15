@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react'
-import Navbar from '../../Components/Module/Navbar'
-import Footer from '../../Components/Module/Footer'
 import styles from './EditProfile.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import Header from '../../Components/module/Header/Header'
+import Footer from '../../Components/module/Footer/Footer'
 
 const EditProfilCompany = () => {
   return (
     <Fragment>
             <div className={styles.Container}></div>
-            <Navbar />
+            <Header />
             <div className={styles.WrapperProfil}>
                 <div className={styles.imgProfil}></div>
                 <div className={styles.Edit}><FontAwesomeIcon icon={faPencil} /> Edit</div>
@@ -57,7 +57,7 @@ const EditProfilCompany = () => {
                   <input type="text" className={styles.FormInput} placeholder='Masukan nama LinkedIn' />
                 </div>
             </div>
-            <div className={styles.footer}><Footer /></div>
+            <Footer />
     </Fragment>
   )
 }

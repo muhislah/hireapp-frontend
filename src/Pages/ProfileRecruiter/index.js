@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
-import Navbar from '../../Components/Module/Navbar'
-import Footer from '../../Components/Module/Footer'
 import styles from './ProfileRecruiter.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import Header from '../../Components/module/Header/Header'
+import Footer from '../../Components/module/Footer/Footer'
 
 const ProfileRecuiter = () => {
   return (
     <Fragment>
-        <Navbar />
+        <Header />
         <div className={styles.Box}>
             <div className={styles.Head}>
                 <div className={styles.Ellipse}>

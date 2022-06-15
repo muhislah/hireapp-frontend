@@ -11,6 +11,9 @@ import RegisterPekerja from './Pages/Pekerja/Auth/Register'
 import ProfileRecuiter from './Pages/ProfileRecruiter'
 import EditProfilCompany from './Pages/EditProfile'
 import Hire from './Pages/HirePage'
+import LandingPage from './Pages/landingpage/Landingpage';
+import Home from './Pages/home/Home';
+import Profile from './Pages/profilepekerja/Profile';
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
         <Route path="/ProfileRecuiter" element={<ProfileRecuiter/>}/>
         <Route path="/EditProfilCompany" element={<EditProfilCompany/>}/>
         <Route path="/Hire" element={<Hire/>}/>
+        <Route path="/Landingpage" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import style from './style.module.css'
-import Header from '../../component/module/Header/Header'
+import Header from '../../Components/module/Header/Header'
 import arrow from './arrow.svg'
-import Card from '../../component/module/Card/Card'
-import Footer from '../../component/module/Footer/Footer'
-import Pagination from '../../component/module/Pagination/Pagination'
+import Card from '../../Components/module/Card/Card'
+import Footer from '../../Components/module/Footer/Footer'
+import Pagination from '../../Components/module/Pagination/Pagination'
 
 
 const Home = () => {

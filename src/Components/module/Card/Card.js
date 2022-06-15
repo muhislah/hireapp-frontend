@@ -10,7 +10,7 @@ const Card = () => {
          <img src={profile} alt='profile'/>
       </div>
       <div className={style.profiledetail}>
-         <p className='font-weight-bold' style={{fontSize: '20px'}}>Louis Tomlinson</p>
+         <p className='font-weight-bold ' style={{fontSize: '20px'}}>Louis Tomlinson</p>
          <p className='text-muted'>Web developer</p>
          <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>Lorem Ipsum</span></p>
          <div className={style.skills} >

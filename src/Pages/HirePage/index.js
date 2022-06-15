@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react'
-import Navbar from '../../Components/Module/Navbar'
-import Footer from '../../Components/Module/Footer'
 import styles from './Hire.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import Header from '../../Components/module/Header/Header'
+import Footer from '../../Components/module/Footer/Footer'
 
 const Hire = () => {
   return (
     <Fragment>
-        <Navbar/>
+        <Header />
         <div className={styles.WrapperProfil}>
                 <div className={styles.imgProfil}></div>
                 <div className={styles.Content}>
