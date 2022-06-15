@@ -13,3 +13,9 @@
 .experience .desc {
   font-size: 12px;
 }
+
+@media screen and (max-width: 567px) {
+  .portfolios {
+    justify-content: center;
+  }
+}

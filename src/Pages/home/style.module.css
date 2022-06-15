@@ -76,3 +76,9 @@
 .active {
    display: block
 }
+
+@media screen and (max-width : 567px) {
+   .container {
+      width: 95%;
+   }   
+}

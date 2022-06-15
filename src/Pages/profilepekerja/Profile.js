@@ -32,7 +32,7 @@ const Profile = () => {
          <div className={style.container+" d-flex flex-column align-items-center"}>
             <div className={style.blue}></div>
             <div className={style.profile}>
-               <img src={photo} alt='photoprofile'/>
+               <img src={data.employee.length > 0 ? data.employee[0].image_profil : photo } alt='photoprofile'/>
                <p id='name' className='h4 mt-3 font-weight-bold'>{data.employee.length > 0 ? data.employee[0].fullname : ""}</p>
                <p className='h6'>{data.employee.length > 0 && data.employee[0].jobs }</p>
                <p className='h6'><img src={location} alt='location'/><span className='text-muted ml-3'>{data.employee.length > 0 && data.employee[0].address}</span> </p>

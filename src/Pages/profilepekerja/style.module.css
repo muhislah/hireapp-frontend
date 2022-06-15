@@ -84,3 +84,24 @@ p > img {
  }
 
 
+ @media screen and (max-width:567px) {
+      .main {
+         padding: 5%;
+      }
+      .container {
+         margin: 0 auto;
+         width: 100%;
+      }
+      div.skills {
+         width: 80% !important;
+      }
+      .account {
+         width: 60% !important;
+      }
+      .menu button {
+         width: 50%;
+         margin: 0;
+      }
+      
+ }
+

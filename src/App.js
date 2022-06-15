@@ -40,7 +40,7 @@ function App() {
         <Route path="/RequestReset" element={<RequestReset/>}/>
         <Route path="/LoginPekerja" element={<LoginPekerja/>}/>
         <Route path="/RegisterPekerja" element={<RegisterPekerja/>}/>
-        <Route path="/ProfileRecuiter" element={<ProfileRecuiter/>}/>
+        <Route path="/ProfileRecruiter" element={<ProfileRecuiter/>}/>
         <Route path="/EditProfilCompany" element={<EditProfilCompany/>}/>
         <Route path="/Hire" element={<Hire/>}/>
         <Route path="/Landingpage" element={<LandingPage />} />

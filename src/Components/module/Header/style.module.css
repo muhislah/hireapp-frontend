@@ -13,3 +13,9 @@
 .container img {
    margin-right: auto;
 }
+
+@media screen and (max-width: 567px) {
+   .container {
+      width: 95%;
+   }   
+}

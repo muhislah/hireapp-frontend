@@ -4,9 +4,11 @@ import message from './message.svg'
 import notif from './notif.svg'
 import example from './example.png'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 const Navbar = ({type}) => {
+   const { user : {user}} = useSelector(state => state)
    const navigate = useNavigate()
    if (type === 'notLogged'){
       return (
@@ -21,7 +23,7 @@ const Navbar = ({type}) => {
           <img src={notif} alt='notification' />
           <img src={message} alt='chat' />
           <div className={style.profile} >
-            <img src={example} alt="profile" />
+            <img src={example} alt="profile" style={{cursor : 'pointer'}} onClick={() => navigate('/profilerecruiter')}/>
           </div>
          </div>
        )
