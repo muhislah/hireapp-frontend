@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/module/Footer/Footer'
 import Header from '../../Components/module/Header/Header'
 import style from './style.module.css'
@@ -8,12 +8,20 @@ import mail from './mail.svg'
 import instagram from './instagram.svg'
 import github from './github.svg'
 import gitlab from './gitlab.svg'
-import { Outlet } from 'react-router'
-import tokped from './tokped.png'
+import { Outlet, useNavigate, useParams } from 'react-router'
+import { useDispatch, useSelector } from 'react-redux'
+import { employeeAction } from '../../Configs/redux/actions/employeeAction'
 
 
 const Profile = () => {
+   const navigate = useNavigate()
+   const { employee} = useSelector(state => state)
+   const dispatch = useDispatch()
    const [active, setActive] = useState('portfolio')
+   const {idemployee} = useParams()
+   useEffect(() => {
+      dispatch(employeeAction(null , idemployee))
+   },[])
   return (
     <>
       <Header />
@@ -22,8 +30,8 @@ const Profile = () => {
             <div className={style.blue}></div>
             <div className={style.profile}>
                <img src={photo} alt='photoprofile'/>
-               <p id='name' className='h4 mt-3 font-weight-bold'>Louis Tomlinsoon</p>
-               <p className='h6'>Web developer</p>
+               <p id='name' className='h4 mt-3 font-weight-bold'>{}</p>
+               <p className='h6'>{}</p>
                <p className='h6'><img src={location} alt='location'/><span className='text-muted ml-3'>Purwokerto, Jawa Tengah</span> </p>
                <p className='text-muted my-3'>Freelancer</p>
                <p className='text-muted w-50'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.</p>
@@ -44,21 +52,10 @@ const Profile = () => {
                <div  className='mb-2'><img src={gitlab} alt=""/><span className='text-muted ml-3'>@Louistommo91</span></div>
             </div>
             <div className={style.menu+' mt-5'}>
-               <button className={active === 'portfolio' ? style.active : ""} onClick={() => setActive('portfolio')}>Portfolio</button>
-               <button className={active === 'experience' ? style.active : ""} onClick={() => setActive('experience')}>Pengalaman Kerja</button>
-               <Outlet />
+               <button className={active === 'portfolio' ? style.active : ""} onClick={() => {setActive('portfolio') ; navigate('/employee/'+idemployee+'/portfolio')}} >Portfolio</button>
+               <button className={active === 'experience' ? style.active : ""} onClick={() => {setActive('experience') ; navigate('/employee/'+idemployee+'/experience')}}>Pengalaman Kerja</button>
                <div className='d-flex mt-5 mb-5 flex-column'>
-                  <div className={style.experience+' d-flex flex-row my-2'}>
-                     <img src={tokped} alt="tokped"/>
-                     <div className='d-flex flex-column ml-5'>
-                        <p className="font-weight-bold" >Engineer</p>
-                        <p className="text-muted">Tokopedia</p>
-                        <p className="text-muted">July 2019 - Januari 2020<span>6 Monts</span></p>
-                        <p className={style.desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.</p>
-                     </div>
-                  </div>
-                 
-                  
+               <Outlet />
                </div>
             </div>
          </div>

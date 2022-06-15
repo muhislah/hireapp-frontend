@@ -14,6 +14,8 @@ import Hire from './Pages/HirePage'
 import LandingPage from './Pages/landingpage/Landingpage';
 import Home from './Pages/home/Home';
 import Profile from './Pages/profilepekerja/Profile';
+import Portfolios from './Pages/profilepekerja/page/Portfolios';
+import Experience from './Pages/profilepekerja/page/Experience';
 
 function App() {
   return (
@@ -33,7 +35,10 @@ function App() {
         <Route path="/Hire" element={<Hire/>}/>
         <Route path="/Landingpage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/employee/:idemployee" element={<Profile />}>
+          <Route path="portfolio" element={<Portfolios />} />
+          <Route path="experience" element={<Experience />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
 import left from './left.svg'
 import right from './right.svg'
+import {useDispatch} from 'react-redux'
 
-const Pagination = ({totalPage}) => {
+
+const Pagination = ({totalPage, currentPage}) => {
    const [currPage, setCurrPage] = useState(1)
 
    useEffect(() => {
       console.log(currPage)
+      currentPage(currPage)
    },[currPage])
 
    let page = []

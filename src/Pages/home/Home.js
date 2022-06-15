@@ -10,11 +10,13 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 const Home = () => {
+   const { employee : {data : employee} , employee : {pagination} } = useSelector(state => state)
    const dispatch = useDispatch()
+   const [page, setPage] = useState(1)
    const [rotate, setRotate] = useState(false)
    useEffect(() => {
-      dispatch(employeeAction())
-   })
+      dispatch(employeeAction(page))
+   },[page])
   return (
     <>
       <Header />
@@ -32,17 +34,12 @@ const Home = () => {
             <button>Search</button>
             </div>
             <div className={style.main}>
-               <Card  />
-               <Card />
-               <Card />
-               <Card />
-               <Card />
-               <Card />
+               { employee ? employee.map((em) => <Card img={em.image} id={em.idemployee} name={em.fullname} job={em.jobs} address={em.address} skills={em.skill}/> ) : <h1 className='w-100'>Loading ..</h1>}
             </div>  
             
          </div>
          <div className={style.pagination} >
-            <Pagination totalPage={4}/>
+            <Pagination totalPage={pagination.totalPage} currentPage={(e) => setPage(e)}/>
          </div>
       </div>
       <Footer/>
