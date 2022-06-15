@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './style.module.css'
 import Header from '../../Components/module/Header/Header'
 import arrow from './arrow.svg'
 import Card from '../../Components/module/Card/Card'
 import Footer from '../../Components/module/Footer/Footer'
 import Pagination from '../../Components/module/Pagination/Pagination'
+import { employeeAction } from '../../Configs/redux/actions/employeeAction'
 
 
 const Home = () => {
    const [rotate, setRotate] = useState(false)
+   useEffect(() => {
+      
+   })
   return (
     <>
       <Header />
@@ -26,7 +30,7 @@ const Home = () => {
             <button>Search</button>
             </div>
             <div className={style.main}>
-               <Card />
+               <Card  />
                <Card />
                <Card />
                <Card />

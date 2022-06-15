@@ -3,22 +3,21 @@ import style from './style.module.css'
 import maps from './location.svg'
 import profile from './profile.png'
 
-const Card = () => {
+const Card = ({name, job, address, skills}) => {
   return (
     <div className={style.card+''}>
       <div className={style.profile}>
          <img src={profile} alt='profile'/>
       </div>
       <div className={style.profiledetail}>
-         <p className='font-weight-bold ' style={{fontSize: '20px'}}>Louis Tomlinson</p>
-         <p className='text-muted'>Web developer</p>
-         <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>Lorem Ipsum</span></p>
+         <p className='font-weight-bold ' style={{fontSize: '20px'}}>{name}</p>
+         <p className='text-muted'>{job}</p>
+         <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>{address}</span></p>
          <div className={style.skills} >
-            <div className={style.skill}>PHP</div>
-            <div className={style.skill}>Javascript</div>
-            <div className={style.skill}>Python</div>
-            <div className={style.skill}>HTML</div>
-            <div className={style.skill}>Nodejs</div>
+          {
+            skills.length > 0 ? skills.map((skill) => <div className={style.skill}>{skill}</div>) : ''
+          }
+            
 
          </div>
       </div>
