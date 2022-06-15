@@ -67,3 +67,12 @@
    width: auto;
    display: flex;
 }
+.sortDrop {
+   top: 50px;
+   position: absolute ;
+   display: none;
+   z-index: 9;
+}
+.active {
+   display: block
+}

@@ -1,5 +1,9 @@
 const initialState = {
-   data : [],
+   data : {
+      employee : [],
+      experience : [],
+      folio : []
+   },
 }
 
 const detailEmployeeReducer = (state = initialState, action) => {
@@ -7,7 +11,10 @@ const detailEmployeeReducer = (state = initialState, action) => {
       return {
          ...state,
          data : {
-            ...action.payload
+            ...action.payload,
+            employee : [
+               ...action.payload.employee
+            ]
          }
       }
    }else {

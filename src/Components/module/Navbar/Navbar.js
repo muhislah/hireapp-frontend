@@ -3,14 +3,16 @@ import style from './style.module.css'
 import message from './message.svg'
 import notif from './notif.svg'
 import example from './example.png'
+import { useNavigate } from 'react-router-dom'
+
 
 const Navbar = ({type}) => {
-   console.log(type)
+   const navigate = useNavigate()
    if (type === 'notLogged'){
       return (
         <div className={style.navbar}>
-         <button className={style.white} >Masuk</button>
-         <button >Daftar</button>
+         <button className={style.white} onClick={() => navigate('/login')}>Masuk</button>
+         <button onClick={() => navigate('/register')}>Daftar</button>
         </div>
       )
    }else {

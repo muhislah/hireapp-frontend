@@ -17,11 +17,13 @@ import Profile from './Pages/profilepekerja/Profile';
 import Portfolios from './Pages/profilepekerja/page/Portfolios';
 import Experience from './Pages/profilepekerja/page/Experience';
 import { useEffect } from 'react';
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import { employeeAction } from './Configs/redux/actions/employeeAction';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
+  
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(employeeAction(1))
@@ -47,6 +49,7 @@ function App() {
           <Route path="portfolio" element={<Portfolios />} />
           <Route path="experience" element={<Experience />} />
         </Route>
+        <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
   );

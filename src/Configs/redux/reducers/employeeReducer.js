@@ -14,14 +14,6 @@ const employeeReducer = (state = initialState, action) => {
             ...action.payload.pagination
          }
       }
-   }else if (action.type === 'GET_DETAIL_EMPLOYEE'){
-      return {
-         ...state,
-         data : {
-            ...action.payload
-         },
-         pagination : null
-      }
    }else {
       return state
    }

@@ -15,7 +15,7 @@ const Card = ({name, job, address, skills, id, img}) => {
          <img src={img ? img : profile} alt='profile'/>
       </div>
       <div className={style.profiledetail}>
-         <p className='font-weight-bold ' style={{fontSize: '20px'}} onClick={() => navigate('/employee/'+id)}>{name}</p>
+         <p className='font-weight-bold ' style={{fontSize: '20px', cursor: "pointer"}} onClick={() => navigate('/employee/'+id)}>{name}</p>
          <p className='text-muted'>{job}</p>
          <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>{address}</span></p>
          <div className={style.skills} >
