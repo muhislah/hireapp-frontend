@@ -18,3 +18,8 @@
    color: white;
    border:none
 }
+.active {
+   background-color: #5E50A1;
+   color: white;
+   border: none
+}

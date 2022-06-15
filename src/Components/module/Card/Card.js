@@ -3,8 +3,11 @@ import style from './style.module.css'
 import maps from './location.svg'
 import profile from './profile.png'
 import { useNavigate } from 'react-router'
+import { useDispatch } from 'react-redux'
+import { employeeAction } from '../../../Configs/redux/actions/employeeAction'
 
 const Card = ({name, job, address, skills, id, img}) => {
+  const dispatch = useDispatch()
   const navigate = useNavigate()
   return (
     <div className={style.card+''}>

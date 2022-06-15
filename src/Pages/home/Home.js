@@ -16,7 +16,7 @@ const Home = () => {
    const [rotate, setRotate] = useState(false)
    useEffect(() => {
       dispatch(employeeAction(page))
-   },[page])
+   },[])
   return (
     <>
       <Header />

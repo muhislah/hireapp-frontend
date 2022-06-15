@@ -22,7 +22,7 @@ const Pagination = ({totalPage, currentPage}) => {
    <div className={style.pagination}>
       <div className={style.page+' d-flex'} onClick={() => setCurrPage(currPage-1)}><img src={left} className="m-auto" alt='toleft'/></div>
       {
-         page.map((page, index) => <div className={style.page+' d-flex'} onClick={() => setCurrPage((currPage) => currPage = index+1)} key={index+1}><p className='m-auto font-weight-bold' value={index+1}>{index+1}</p></div>)
+         page.map((page, index) => <div className={style.page+' d-flex '+(currPage === (index+1) ? style.active : '' )} onClick={() => setCurrPage((currPage) => currPage = index+1)} key={index+1}><p className='m-auto font-weight-bold' value={index+1}>{index+1}</p></div>)
       }
       <div className={style.page+' d-flex'} onClick={() => setCurrPage(currPage+1)}><img src={right} className="m-auto" alt='toright'/></div>
    </div>

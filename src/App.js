@@ -16,8 +16,16 @@ import Home from './Pages/home/Home';
 import Profile from './Pages/profilepekerja/Profile';
 import Portfolios from './Pages/profilepekerja/page/Portfolios';
 import Experience from './Pages/profilepekerja/page/Experience';
+import { useEffect } from 'react';
+import {useDispatch} from 'react-redux'
+import { employeeAction } from './Configs/redux/actions/employeeAction';
+
 
 function App() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(employeeAction(1))
+  })
   return (
     <BrowserRouter>
       <Routes>
