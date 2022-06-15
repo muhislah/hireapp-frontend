@@ -1,41 +1,54 @@
 .Box{
-    position: absolute;
+    display: flex;
     width: 1140px;
     height: 960px;
-    left: 190px;
-    top: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
     background: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0px 10px 50px rgba(132, 132, 132, 0.25);
-    /* border: 1px black solid; */
+    border: 1px black solid;
 }
 .Head{
-    position: absolute;
     width: 1140px;
     height: 200px;
     background: #5E50A1;
     border-radius: 8px 8px 0px 0px;
 }
+.Edit{
+    width: 200px;
+    height: 56px;
+    margin-top: 150px;
+    margin-left: auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
 .Ellipse{
-    position: absolute;
     width: 150px;
     height: 150px;
-    border: 1px black solid;
+    margin-top: -180px;
+    margin-left: 490px;
+    margin-right: auto;
+    /* border: 1px black solid; */
     border-radius: 50%;
-    left: 495px;
-    top: 114px;
 }
-.Content{
-    position: relative;
-    right: 230px;
-    top: 170px;
+/* .Content{
     width: 614px;
     height: 614px;
-    /* border: 1px solid black; */
-}
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+} */
 .CompanyName{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    /* margin-right: auto; */
     width: 254px;
     height: 56px;
     font-family: 'Open Sans', sans-serif;
@@ -44,18 +57,19 @@
     font-size: 22px;
     line-height: 56px;
     color: #1F2A36;
+    /* border: 1px solid black; */
 }
 .CompanyRole{
     margin-left: auto;
     margin-right: auto;
-    width: 58px;
-    height: 24px;
+    width: 55px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
     color: #1F2A36;
+    border: 1px solid black;
 }
 .WrapperLoct{
     margin-left: auto;
@@ -65,16 +79,20 @@
 }
 .MapsIcon{
     color: #9EA0A5;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .CompanyAdress{
-    align-items: center;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #9EA0A5;
+    border: 1px solid black;
 }
 .Desciption{
     margin-left: auto;
@@ -91,11 +109,10 @@
     color: #9EA0A5;
 }
 .btn{
-    position: absolute;
     width: 297px;
     height: 50px;
-    left: -70px;
-    top: 476px;
+    margin-left: 415px;
+    margin-top: 30px;
     border: none;
     background: #5E50A1;
     border-radius: 4px;
@@ -107,8 +124,9 @@
     color: #FFFFFF;
 }
 .SocialMedia{
-    margin-top: -50px;
-    margin-left: -65px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
     width: 297px;
     height: 250px;
     /* border: 1px solid black; */
@@ -165,4 +183,12 @@
     position: absolute;
     top: 1400px;
     width: 100%;
+}
+@media only screen and (max-width: 1056px){
+    .Box{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100vh;
+    }
 }
