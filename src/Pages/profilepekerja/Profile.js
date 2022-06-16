@@ -23,12 +23,13 @@ const Profile = () => {
    const [active, setActive] = useState('portfolio')
    const {idemployee} = useParams()
    const { detailEmployee : { data } } = useSelector(state => state)
+   const [portoEx, setPortoEx] = useState({})
 
 
   return (
     <>
       <Header />
-      {console.log('ini harusnya terakhir')}
+
       <div className={style.main}>
          <div className={style.container+" d-flex flex-column align-items-center"}>
             <div className={style.blue}></div>
@@ -56,7 +57,7 @@ const Profile = () => {
                <button className={active === 'portfolio' ? style.active : ""} onClick={() => {setActive('portfolio') ; navigate('/employee/'+idemployee+'/portfolio')}} >Portfolio</button>
                <button className={active === 'experience' ? style.active : ""} onClick={() => {setActive('experience') ; navigate('/employee/'+idemployee+'/experience')}}>Pengalaman Kerja</button>
                <div className='d-flex mt-5 mb-5 flex-column'>
-               <Outlet />
+               <Outlet context={[portoEx, setPortoEx]} />
                </div>
             </div>
          </div>

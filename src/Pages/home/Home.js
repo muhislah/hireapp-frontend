@@ -25,7 +25,8 @@ const Home = () => {
 
    useEffect(() => {
       fetchData()
-   },[page, search, sort, sortBy])
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+   },[page, search, sort, sortBy, ])
 
    function fetchData(){
       dispatch(employeeAction(page, search, sort, sortBy))
@@ -34,17 +35,17 @@ const Home = () => {
          search : `?search=${search}&sort=${sort}&sortby=${sortBy}`
       })
    }
-  if (employee.length === 0) {
-      return (
-         <>
-            <Header />
-            <div className='d-flex w-100 h-75'>
-               <h1 className="m-auto">Data Not Found</h1>
-            </div>
-            <Footer />
-         </>
-      )
-  }
+//   if (employee.length === 0) {
+//       return (
+//          <>
+//             <Header />
+//             <div className='d-flex w-100 h-75'>
+//                <h1 className="m-auto">Data Not Found</h1>
+//             </div>
+//             <Footer />
+//          </>
+//       )
+//   }
   return (
     <>
       <Header />
