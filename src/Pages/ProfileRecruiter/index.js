@@ -15,6 +15,7 @@ const ProfileRecuiter = () => {
     const navigate = useNavigate()
     useEffect(() => {
         dispatch(companyAction(token))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
   return (
     <Fragment>
