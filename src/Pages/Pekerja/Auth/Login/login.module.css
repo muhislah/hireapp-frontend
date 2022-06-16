@@ -55,8 +55,6 @@
     position: absolute;
     width: 258px;
     height: 44px;
-    left: 795px;
-    top: 145px;
     font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     line-height: 44px;
@@ -66,8 +64,7 @@
     position: absolute;
     width: 570px;
     height: 50px;
-    left: 795px;
-    top: 205px;
+    top: 60px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -78,16 +75,15 @@
 .wrapperEmail{
     height: 90px;
     width: 570px;
-    position: absolute;
-    left: 795px;
-    top: 277px;
+    position: relative;
+    top: 190px;
     color: #9EA0A5;
     font-size: 12px;
     /* border: 1px black solid; */
 }
 .inpEmail{
-    position: absolute;
-    top: 20px;
+    position: relative;
+    top: -10px;
     padding-left: 15px;
     height: 50px;
     width: 570px;
@@ -105,17 +101,16 @@
     height: 90px;
     width: 570px;
     position: absolute;
-    left: 795px;
-    top: 379px;
+    /* left: 795px; */
+    top: 290px;
     color: #9EA0A5;
     font-size: 12px;
 }
 .forgot{
-    position: absolute;
+    /* position: absolute; */
+    right: 1px;
     width: 125px;
     height: 22px;
-    right: 75px;
-    top: 523px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -124,22 +119,24 @@
     color: #1F2A36;
 }
 .btnLogin{
-    position: absolute;
+    /* position: absolute; */
     width: 570px;
     height: 50px;
-    right: 75px;
-    top: 579px;
+    top: 55px;
     background: #FBB017;
     color: #FFFFFF;
     border: none;
     border-radius: 4px;
 }
 .textAkhir{
-    position: absolute;
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
     width: 284px;
     height: 22px;
-    right: 223px;
-    top: 667px;
+    /* right: 223px; */
+    top: 145px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -149,4 +146,41 @@
 }
 .daftar{
    color: #FBB017;
+}
+.Wrapper{
+    position: absolute;
+    width: 570px;
+    height: 400px;
+    top: 145px;
+    right: 100px;
+    /* border: 1px solid black; */
+}
+.Wrapper2{
+    position: absolute;
+    width: 570px;
+    height: 200px;
+    top: 400px;
+    right: -1px;
+    /* border: 1px solid black; */
+}
+@media only screen and (max-width: 550px){
+    .wrapperPwImg{
+        display: none;
+    }
+    .Wrapper{
+        display: block;
+        width: 95%;
+    }
+    .Wrapper2{
+        display: inline-block;
+        width: 95%;
+    }
+    .inpEmail{
+        display: block;
+        width: 100%;
+    }
+    .btnLogin{
+        display: block;
+        width: 100%;
+    }
 }

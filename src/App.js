@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom' 
 import Login from './Pages/Perekrut/Auth/Login'
 import Register from './Pages/Perekrut/Auth/Register'
 import ResetPassword from './Pages/Perekrut/Auth/ResetPassword'
@@ -9,7 +9,7 @@ import RequestReset from './Pages/Perekrut/Auth/RequestReset'
 import LoginPekerja from './Pages/Pekerja/Auth/Login'
 import RegisterPekerja from './Pages/Pekerja/Auth/Register'
 import ProfileRecuiter from './Pages/ProfileRecruiter'
-import EditProfilCompany from './Pages/EditProfile'
+import EditProfilCompany from './Pages/EditProfile/index'
 import Hire from './Pages/HirePage'
 import LandingPage from './Pages/landingpage/Landingpage';
 import Home from './Pages/home/Home';
@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/Login" replace="true"/>}/>
+        <Route path="/" element={<Navigate to="/Register" replace="true"/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Register" element={<Register/>}/>
         <Route path="/ResetPassword" element={<ResetPassword/>}/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Footer from '../../Components/module/Footer/Footer'
-import Header from '../../Components/module/Header/Header'
+import Footer from '../../Components/Module/Footer/Footer'
+import Header from '../../Components/Module/Header/Header'
 import style from './style.module.css'
 import photo from './photo.jpg'
 import location from './location.svg'

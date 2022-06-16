@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import styles from './EditProfile.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPencil, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import Header from '../../Components/module/Header/Header'
-import Footer from '../../Components/module/Footer/Footer'
+import Header from '../../Components/Module/Header/Header'
+import Footer from '../../Components/Module/Footer/index'
 
 const EditProfilCompany = () => {
   return (
