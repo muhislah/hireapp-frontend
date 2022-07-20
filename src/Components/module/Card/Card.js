@@ -20,7 +20,7 @@ const Card = ({name, job, address, skills, id, img}) => {
          <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>{address}</span></p>
          <div className={style.skills} >
           {
-            skills.length > 0 ? skills.map((skill) => <div className={style.skill}>{skill}</div>) : ''
+            skills?.length > 0 ? skills.map((skill) => <div className={style.skill}>{skill}</div>) : ''
           }
             
 

@@ -20,6 +20,7 @@ import { useEffect } from 'react';
 import {useDispatch} from 'react-redux'
 import { employeeAction } from './Configs/redux/actions/employeeAction';
 import NotFound from './Pages/NotFound/NotFound';
+import Edit from './Pages/editpekerja/Edit';
 
 
 function App() {
@@ -34,21 +35,23 @@ function App() {
         <Route path="/" element={<Navigate to="/Login" replace="true"/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/Register" element={<Register/>}/>
-        <Route path="/ResetPassword" element={<ResetPassword/>}/>
+        {/* <Route path="/ResetPassword" element={<ResetPassword/>}/>
         <Route path="/ConfirmPassword" element={<ConfirmPassword/>}/>
         <Route path="/LoginConfirm" element={<LoginConfirm/>}/>
-        <Route path="/RequestReset" element={<RequestReset/>}/>
+        <Route path="/RequestReset" element={<RequestReset/>}/> */}
         <Route path="/LoginPekerja" element={<LoginPekerja/>}/>
         <Route path="/RegisterPekerja" element={<RegisterPekerja/>}/>
         <Route path="/ProfileRecruiter" element={<ProfileRecuiter/>}/>
-        <Route path="/EditProfilCompany" element={<EditProfilCompany/>}/>
+        <Route path="/EditProfileCompany" element={<EditProfilCompany/>}/>
         <Route path="/Hire" element={<Hire/>}/>
         <Route path="/Landingpage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/employee/:idemployee" element={<Profile />}>
+          <Route index element={<Portfolios />} />
           <Route path="portfolio" element={<Portfolios />} />
           <Route path="experience" element={<Experience />} />
         </Route>
+        <Route path="/editprofilpekerja" element={<Edit />} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
