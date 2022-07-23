@@ -1,0 +1,286 @@
+.WrapperProfil{
+    position: absolute;
+    width: 357px;
+    height: 692px;
+    left: 150px;
+    top: 150px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 10px 50px rgba(132, 132, 132, 0.25);
+}
+.simpan{
+    position: absolute;
+    left: 400px;
+    top: 640px;
+}
+.imgProfil{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 94px;
+    top: 30px;
+    border-radius: 50%;
+}
+.Content{
+    position: absolute;
+    width: 297px;
+    height: 350px;
+    left: 30px;
+    top: 193px;
+    /* border: 1px black solid; */
+}
+.CompanyName{
+    position: absolute;
+    width: 254px;
+    height: 56px;
+    left: 10px;
+    top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 56px;
+    color: #1F2A36;
+}
+.CompanyRole{
+    position: absolute;
+    width: 58px;
+    height: 24px;
+    left: 10px;
+    top: 70px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #1F2A36;
+}
+.WrapperLoct{
+    position: absolute;
+    left: 10px;
+    top: 110px;
+}
+.MapsIcon{
+    color: #9EA0A5;
+    margin-right: 10px;
+    
+}
+.CompanyAdress{
+    position: absolute;
+    width: 166px;
+    height: 20px;
+    left: 20px;
+    top: 3px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9EA0A5;
+}
+.Text{
+    position: absolute;
+    left: 10px;
+    top: 180px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #9EA0A5;
+}
+.Text2{
+    position: absolute;
+    width: 254px;
+    height: 56px;
+    left: 10px;
+    top: 310px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 56px;
+    color: #1F2A36;
+}
+.BoxRectangleSkill{
+    position: absolute;
+    width: 297px;
+    height: 150px;
+    left: -1px;
+    top: 350px;
+    /* border: 1px black solid; */
+}
+.RectangleSkill{
+    position: relative;
+    width: 99px;
+    height: 28px;
+    left: 0px;
+    top: 10px;
+    margin-left: 20px;
+    background: rgba(251, 176, 23, 0.6);
+    border: 1px solid #FBB017;
+    border-radius: 4px;
+}
+.TextSkill{
+    position: absolute;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.List{
+    margin-left: -50px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.TextHead{
+    position: absolute;
+    width: 484px;
+    height: 44px;
+    left: 388px;
+    top: -180px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    color: #1F2A36;
+}
+.TextDescript{
+    position: absolute;
+    width: 570px;
+    height: 50px;
+    left: 388px;
+    top: -120px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #46505C;    
+}
+.wrapperProject{
+    position: absolute;
+    left: 388px;
+    top: -20px;
+    width: 139px;
+    height: 16px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9EA0A5;     
+}
+.ProjectOption{
+    position: absolute;
+    width: 570px;
+    height: 50px;
+    left: 0px;
+    top: 30px;
+    background: #FFFFFF;
+    border: 1px solid #E2E5ED;
+    border-radius: 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #858D96;
+    padding-left: 15px;
+}
+.FormInput{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    padding-left: 15px;
+    width: 570px;
+    height: 50px;
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    background: #FFFFFF;
+    border: 1px solid #E2E5ED;
+    border-radius: 4px;
+}
+.FormInputDescript{
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    padding-left: 15px;
+    width: 570px;
+    height: 201px;
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    background: #FFFFFF;
+    border: 1px solid #E2E5ED;
+    border-radius: 4px;
+}
+.wrapperFullName{
+    position: absolute;
+    width: 104px;
+    height: 16px;
+    left: 388px;
+    top: 80px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9EA0A5;
+}
+.wrapperEmail{
+    position: absolute;
+    width: 104px;
+    height: 16px;
+    left: 388px;
+    top: 180px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9EA0A5;
+}
+.wrapperNoHp{
+    position: absolute;
+    width: 150px;
+    height: 16px;
+    left: 388px;
+    top: 280px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9EA0A5;
+}
+.wrapperDescript{
+    position: absolute;
+    width: 104px;
+    height: 16px;
+    left: 388px;
+    top: 380px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9EA0A5;
+}
+.footer{
+    position: absolute;
+    top: 1400px;
+    width: 100%;
+}

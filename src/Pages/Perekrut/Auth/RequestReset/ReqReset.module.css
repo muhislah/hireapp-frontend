@@ -1,0 +1,74 @@
+.mainBox{
+    margin-left: auto;
+    margin-right: auto;
+    height: 1091px;
+    width: 1028px;
+    background-color: #F0F5F9;
+    border: none;
+}
+.Box{
+    position: relative;
+    top: 192px;
+    left: 214px;
+    width: 600px;
+    height: 707px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: none;
+}
+.imgLock{
+    position: absolute;
+    top: 259px;
+    bottom: 243px;
+    left: 197px;
+    right: 198px;
+    width: 205px;
+    height: 205px;
+}
+.imgLogo{
+    position: absolute;
+    top: 46px;
+    left: 210px;
+}
+.text{
+    position: absolute;
+    left: 72px;
+    top: 153px;
+    width: 456px;
+    height: 72px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #253757;
+}
+.text2{
+    position: absolute;
+    left: 32px;
+    top: 503px;
+    width: 536px;
+    height: 42px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #46505C;
+}
+.btn{
+    position: absolute;
+    left: 198px;
+    top: 557px;
+    width: 204px;
+    height: 36px;
+    background: #FBB017;
+    border-radius: 4px;
+    border: none;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}

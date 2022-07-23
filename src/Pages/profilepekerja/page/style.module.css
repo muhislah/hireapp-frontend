@@ -1,0 +1,21 @@
+.portfolios {
+   justify-content: space-between;
+ }
+ .experience img {
+  width: 74px;
+  max-width: 74px;
+  height: 74px;
+  max-height: 74px;
+}
+.experience p {
+  margin: 3px;
+}
+.experience .desc {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 567px) {
+  .portfolios {
+    justify-content: center;
+  }
+}
