@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Login from './Pages/Perekrut/Auth/Login'
