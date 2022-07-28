@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Footer from '../../Components/module/Footer/Footer'
 import Header from '../../Components/module/Header/Header'
 import style from './style.module.css'
 import photo from './photo.jpg'
@@ -10,6 +9,7 @@ import github from './github.svg'
 import { Outlet, useNavigate, useParams } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
 import { detailEmployeeAction } from '../../Configs/redux/actions/detailEmployeeAction'
+import Footer from '../../Components/module/Footer/Footer'
 
 
 const Profile = () => {
