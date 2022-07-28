@@ -25,7 +25,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/" replace="true"/>}/>
+        <Route path="/" element={<Navigate to="/landingpage" replace="true"/>}/>
         <Route path="/company/login" element={ <RemoveToken><Login/></RemoveToken>}/>
         <Route path="/company/register" element={<RemoveToken><Register/></RemoveToken>}/>
         <Route path="/login" element={<RemoveToken><LoginPekerja /></RemoveToken>}/>
