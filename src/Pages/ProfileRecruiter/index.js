@@ -46,7 +46,7 @@ const ProfileRecuiter = () => {
             <div>
               <button
                 className={styles.btn}
-                onClick={() => navigate("/company/edit")}
+                onClick={() => navigate("/company/profile/edit")}
               >
                 Edit Profile
               </button>
