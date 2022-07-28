@@ -19,7 +19,6 @@ import MyProfile from './Pages/myprofile/Profile';
 import MyPortfolios from './Pages/myprofile/page/Portfolios';
 import MyExperience from './Pages/myprofile/page/Experience';
 import { IsCompany, IsEmployee, IsLogin, RemoveToken } from './Configs/redux/route/privateRoute';
-import Select from './Pages/Select';
 
 
 function App() {
@@ -48,7 +47,6 @@ function App() {
         </Route>
         <Route path='/company/hire/:idHire' element={<IsCompany><Hire /></IsCompany>} />
         <Route path="/edit" element={<IsEmployee><Edit /></IsEmployee>} />
-        <Route path="/gettingstarted" element={<Select />} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
