@@ -6,16 +6,18 @@ import skilltalent from './skilltalent.png'
 import check from './check.svg'
 import Footer from '../../Components/module/Footer/Footer'
 import yellowcheck from './yellowcheck.svg'
+import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
+   const navigate = useNavigate()
   return (
    <>
     <div className={style.container}>
       <div className={style.section+' row'}>
          <div className='col-md-6 col-sm-12 col-xs-12 d-flex flex-column justify-content-center'>
             <h1 className='font-weight-bold d-inline-block w-75'>Talenta terbaik negri untuk perubahan revolusi 4.0</h1>
-            <p className='text-muted'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.</p>
-            <button className={style.button}>Mulai Sekarang</button>
+            <p className='text-muted'>Perubahan di era 4.0 yang sangat pesat membutuhkan sumber daya manusia yang berkembang pesat pula</p>
+            <button className={style.button} onClick={() => navigate('/login')}>Mulai Sekarang</button>
          </div>
          <div className='col-md-6 col-sm-12 col-xs-12'>
             <img className='w-100' src={talenta} alt="talenta"/>
@@ -27,16 +29,16 @@ const LandingPage = () => {
          </div>
          <div className='col-md-6 col-sm-12 col-xs-12 d-flex flex-column justify-content-center ps-3'>
             <h1 className='font-weight-bold mb-5'>Kenapa harus mencari tallent di peworld</h1>
-            <p className='text-muted'><img src={check} alt="alt" /><span className='ml-3'>Lorem ipsum dolor sit amet.</span></p>
-            <p className='text-muted'><img src={check} alt="alt" /><span span className='ml-3'>Lorem ipsum dolor sit amet.</span></p>
-            <p className='text-muted'><img src={check} alt="alt" /><span span className='ml-3'>Lorem ipsum dolor sit amet.</span></p>
-            <p className='text-muted'><img src={check} alt="alt" /><span span className='ml-3'>Lorem ipsum dolor sit amet.</span></p>
+            <p className='text-muted'><img src={check} alt="alt" /><span className='ml-3'>Terjamin kualitasnya.</span></p>
+            <p className='text-muted'><img src={check} alt="alt" /><span span className='ml-3'>Optimis dan tanggung jawab.</span></p>
+            <p className='text-muted'><img src={check} alt="alt" /><span span className='ml-3'>Semangat dan berdikasi.</span></p>
+            <p className='text-muted'><img src={check} alt="alt" /><span span className='ml-3'>Berattitude dan berakhlak.</span></p>
          </div>
       </div>
       <div className={style.section+' row'}>
          <div className='col-md-6 col-sm-12 col-xs-12 d-flex flex-column justify-content-center'>
             <h1 className='font-weight-bold'>Skill Tallent</h1>
-            <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.</p>
+            <p >Skill talent kita telah disesuiakan dengan perkembangan industri modern.</p>
             <div className='row'>
                <div className='col-6'>
                   <p className='text-muted'><img src={yellowcheck} alt="alt" /><span className='ml-3'>Java</span></p>
@@ -58,7 +60,7 @@ const LandingPage = () => {
       </div>  
       </div> 
       <div className={style.review+' d-flex flex-column align-items-center justify-content-center'}>
-         <h1 className='d1 font-weight-bold'>Their opinion about peworld</h1>
+         <h1 className='d1 font-weight-bold'>Beberapa Pendapat mengenai Peworld</h1>
          <div className={style.carousel}>
 
          </div>
