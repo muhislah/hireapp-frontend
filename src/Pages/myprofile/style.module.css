@@ -1,0 +1,107 @@
+.main {
+   width: 100%;
+   background: #E5E5E5;
+   padding : 70px
+}
+.container {
+   background-color: white;
+   width: 80%;
+   margin: 0 auto;
+   border-radius: 8px;
+   overflow: hidden;
+}
+.blue {
+   height: 200px;
+   width: 100%;
+   background-color:    #5E50A1;
+}
+.profile {
+   position: relative;
+   top : -75px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+}
+.profile > img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+}
+.profile p {
+   text-align: center;
+}
+p > img {
+   height: 20px;
+}
+.profile button {
+   width: 25%;
+   height: 50px;
+   background-color: #5E50A1;
+   border-radius: 4px;
+   color: white;
+   border: none
+}
+.profile button:focus {
+   outline: none;
+   border: none;
+   box-shadow: 0 0 6px #5E50A1;
+}
+.skills {
+   margin-top: 10px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+ .skill {
+   text-align: center;
+   background: rgba(251, 176, 23, 0.6);
+   border: 1px solid #FBB017;
+   border-radius: 4px;
+   color: white;
+   padding: 4px 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   font-size: 12px;
+ }
+ .menu {
+   width: 90%;
+ }
+ .menu > button {
+   padding: 0 0 5px;
+   border: none;
+   background: none;
+   margin-right:15px;
+ }
+ .menu > button:focus{
+  border: none;
+  outline: none;
+ }
+
+.menu > button.active{
+   border-bottom: 2px solid #5E50A1;
+   font-weight: 700;
+ }
+
+
+ @media screen and (max-width:567px) {
+      .main {
+         padding: 5%;
+      }
+      .container {
+         margin: 0 auto;
+         width: 100%;
+      }
+      div.skills {
+         width: 80% !important;
+      }
+      .account {
+         width: 60% !important;
+      }
+      .menu button {
+         width: 50%;
+         margin: 0;
+      }
+      
+ }
+

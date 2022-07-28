@@ -3,9 +3,9 @@ import { useOutletContext } from 'react-router-dom'
 import style from './style.module.css'
 import tokped from './tokped.png'
 
-const Experience = () => {
-   const { experience } = useOutletContext()
-   console.log(experience)
+const MyExperience = () => {
+   const props = useOutletContext()
+   const experience = props.experience
    return (
       <div className={style.experience + ' d-flex flex-column my-2 row'}>
          {experience ? experience.map(data => {
@@ -24,7 +24,7 @@ const Experience = () => {
             : "loading"
          }
       </div>
-  )
+   )
 }
 
-export default Experience
+export default MyExperience

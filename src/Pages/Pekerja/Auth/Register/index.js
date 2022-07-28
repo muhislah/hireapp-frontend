@@ -1,11 +1,33 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import RegisterCSS from './Register.module.css'
 import BG from '../../../../Images/BG.png'
 import Mask from '../../../../Images/Mask.png'
 import Mask1 from '../../../../Images/Mask1.png'
 import Logo from '../../../../Images/PeworldLogo.png'
+import { useRef } from 'react'
+import { register } from './helper'
 
 const RegisterPekerja = () => {
+  const [user, setUser] = useState({})
+  const pass1 = useRef(null)
+  const pass2 = useRef(null)
+  const handleChange = (e) => {
+    setUser({
+      ...user,
+      [e.target.name] : e.target.value
+    })
+  }
+  const handleSubmit = async () => {
+    try {
+      const data = await register(user)
+      if(data?.message == 'User berhasil register'){
+        return alert('registrasi berhasil')
+      }
+      alert('registrasi gagal')
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <Fragment>
         <div className="container-fluid">
@@ -23,26 +45,26 @@ const RegisterPekerja = () => {
                 <p className={RegisterCSS.lorem}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.</p>
                 <div className={RegisterCSS.wrapperFullName}>
                   <p>Nama</p>
-                  <input type="text" className={RegisterCSS.inpEmail} placeholder='Masukan nama lengkap' />
+                  <input type="text" className={RegisterCSS.inpEmail} name="fullname" onChange={(e) => handleChange(e)} placeholder='Masukan nama lengkap' />
                 </div>
                 <div className={RegisterCSS.wrapperEmail}>
                   <p>Email</p>
-                  <input type="text" className={RegisterCSS.inpEmail} placeholder='Masukan alamat email' />
+                  <input type="text" className={RegisterCSS.inpEmail} name="email" onChange={(e) => handleChange(e)}  placeholder='Masukan alamat email' />
                 </div>
                 <div className={RegisterCSS.wrapperNoHp}>
                   <p>No. Handphone</p>
-                  <input type="text" className={RegisterCSS.inpEmail} placeholder='Masukan No. Handphone' />
+                  <input type="text" className={RegisterCSS.inpEmail} name="phonenumber" onChange={(e) => handleChange(e)} placeholder='Masukan No. Handphone' />
                 </div>
                 <div className={RegisterCSS.wrapperPassword}>
                   <p>Kata Sandi</p>
-                  <input type="text" className={RegisterCSS.inpEmail} placeholder='Masukan kata sandi' />
+                  <input type="text" className={RegisterCSS.inpEmail} name="password" ref={pass1} onChange={(e) => handleChange(e)} placeholder='Masukan kata sandi' />
                 </div>
                 <div className={RegisterCSS.wrapperConfPassword}>
                   <p>Konfirmasi Kata Sandi</p>
-                  <input type="text" className={RegisterCSS.inpEmail} placeholder='Konfirmasi kata sandi' />
+                  <input type="text" className={RegisterCSS.inpEmail} name="password2" onChange={(e) => handleChange(e)} placeholder='Konfirmasi kata sandi' ref={pass2} />
                 </div>
             </div>
-              <button className={RegisterCSS.btnLogin}>Daftar</button>
+              <button className={RegisterCSS.btnLogin} disabled={user.password !== user.password2 || user.password == '' } onClick={handleSubmit}>Daftar</button>
               <p className={RegisterCSS.textAkhir}>Anda belum punya akun? <span className={RegisterCSS.daftar}>Masuk disini</span></p>
               </div>
         </div>

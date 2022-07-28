@@ -26,7 +26,7 @@ const Home = () => {
    useEffect(() => {
       fetchData()
    // eslint-disable-next-line react-hooks/exhaustive-deps
-   },[page, search, sort, sortBy, ])
+   },[page, search, sort, sortBy])
 
    function fetchData(){
       dispatch(employeeAction(page, search, sort, sortBy))

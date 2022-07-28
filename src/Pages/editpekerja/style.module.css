@@ -52,6 +52,13 @@
    margin: 0 0 10px 0;
    font-size: 14px;
 }
+.xbutton {
+   filter:  brightness(0) invert(1);
+   display: inline-block;
+   height: 13px;
+   margin-left: 10px;
+   cursor: pointer;
+}
 
 .forms {
    width: 68%;
@@ -76,6 +83,7 @@
    margin-bottom: 5px;
    border: 1px solid #E2E5ED;
    width: 100%;
+   font-size: 14px;
 }
 .form button {
    height: 50px;
@@ -100,9 +108,13 @@
    border: 1px solid #E2E5ED;
    width: 100%;
    height: 130px;
+   font-size: 14px;
 }
 .skill {
    background-color: #FBB017;
    color: white;
    padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }

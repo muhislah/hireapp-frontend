@@ -2,10 +2,6 @@ import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Login from './Pages/Perekrut/Auth/Login'
 import Register from './Pages/Perekrut/Auth/Register'
-import ResetPassword from './Pages/Perekrut/Auth/ResetPassword'
-import ConfirmPassword from './Pages/Perekrut/Auth/ConfirmPassword'
-import LoginConfirm from './Pages/Perekrut/Auth/LoginConfirm'
-import RequestReset from './Pages/Perekrut/Auth/RequestReset'
 import LoginPekerja from './Pages/Pekerja/Auth/Login'
 import RegisterPekerja from './Pages/Pekerja/Auth/Register'
 import ProfileRecuiter from './Pages/ProfileRecruiter'
@@ -16,42 +12,38 @@ import Home from './Pages/home/Home';
 import Profile from './Pages/profilepekerja/Profile';
 import Portfolios from './Pages/profilepekerja/page/Portfolios';
 import Experience from './Pages/profilepekerja/page/Experience';
-import { useEffect } from 'react';
-import {useDispatch} from 'react-redux'
-import { employeeAction } from './Configs/redux/actions/employeeAction';
 import NotFound from './Pages/NotFound/NotFound';
 import Edit from './Pages/editpekerja/Edit';
+import MyProfile from './Pages/myprofile/Profile';
+import MyPortfolios from './Pages/myprofile/page/Portfolios';
+import MyExperience from './Pages/myprofile/page/Experience';
 
 
 function App() {
-  
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(employeeAction(1))
-  })
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/Login" replace="true"/>}/>
-        <Route path="/Login" element={<Login/>}/>
-        <Route path="/Register" element={<Register/>}/>
-        {/* <Route path="/ResetPassword" element={<ResetPassword/>}/>
-        <Route path="/ConfirmPassword" element={<ConfirmPassword/>}/>
-        <Route path="/LoginConfirm" element={<LoginConfirm/>}/>
-        <Route path="/RequestReset" element={<RequestReset/>}/> */}
-        <Route path="/LoginPekerja" element={<LoginPekerja/>}/>
-        <Route path="/RegisterPekerja" element={<RegisterPekerja/>}/>
-        <Route path="/ProfileRecruiter" element={<ProfileRecuiter/>}/>
-        <Route path="/EditProfileCompany" element={<EditProfilCompany/>}/>
-        <Route path="/Hire" element={<Hire/>}/>
-        <Route path="/Landingpage" element={<LandingPage />} />
+        <Route path="/" element={<Navigate to="/" replace="true"/>}/>
+        <Route path="/company/login" element={<Login/>}/>
+        <Route path="/company/register" element={<Register/>}/>
+        <Route path="/login" element={<LoginPekerja/>}/>
+        <Route path="/register" element={<RegisterPekerja/>}/>
+        <Route path="/company/profile" element={<ProfileRecuiter/>}/>
+        <Route path="/company/profile/edit" element={<EditProfilCompany/>}/>
+        <Route path="/company/hire" element={<Hire/>}/>
+        <Route path="/landingpage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/employee/:idemployee" element={<Profile />}>
           <Route index element={<Portfolios />} />
           <Route path="portfolio" element={<Portfolios />} />
           <Route path="experience" element={<Experience />} />
         </Route>
-        <Route path="/editprofilpekerja" element={<Edit />} />
+        <Route path="/profile" element={<MyProfile />}>
+          <Route index element={<MyPortfolios />} />
+          <Route path="portfolio" element={<MyPortfolios />} />
+          <Route path="experience" element={<MyExperience />} />
+        </Route>
+        <Route path="/edit" element={<Edit />} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
