@@ -2,8 +2,8 @@ import React, { Fragment, useState, useEffect } from "react";
 import styles from "./Hire.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import Header from "../../Components/Module/Header/Header";
-import Footer from "../../Components/Module/Footer/Footer";
+import Header from "../../Components/module/Header/Header";
+import Footer from "../../Components/module/Footer/Footer";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +13,6 @@ import { detailEmployeeAction } from "../../Configs/redux/actions/detailEmployee
 
 const Hire = () => {
   const dispatch = useDispatch();
-
   // company
   const {
     company: { data: company },
@@ -97,7 +96,7 @@ const Hire = () => {
           <p className={styles.Text2}>Skill</p>
           <div className={styles.BoxRectangleSkill}>
             {data.employee.length > 0
-              ? data.employee[0].skill.map((skills) => (
+              ? data.employee[0].skill?.map((skills) => (
                   <ul className={styles.List}>
                     <li className={styles.RectangleSkill}>
                       <p className={styles.TextSkill}>{skills}</p>

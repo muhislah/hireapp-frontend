@@ -2,13 +2,8 @@ import React, { Fragment, useEffect } from 'react'
 import styles from './ProfileRecruiter.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-<<<<<<< HEAD
 import Header from '../../Components/module/Header/Header'
 import Footer from '../../Components/module/Footer/Footer'
-=======
-import Header from '../../Components/Module/Header/Header'
-import Footer from '../../Components/Module/Footer/Footer'
->>>>>>> 2a6f486c23ec759314fecaa4cd334f8346ec1152
 import { useNavigate} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { companyAction } from '../../Configs/redux/actions/companyAction'

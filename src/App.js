@@ -43,6 +43,7 @@ function App() {
           <Route path="portfolio" element={<MyPortfolios />} />
           <Route path="experience" element={<MyExperience />} />
         </Route>
+        <Route path='/company/hire/:idHire' element={<Hire />} />
         <Route path="/edit" element={<Edit />} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>

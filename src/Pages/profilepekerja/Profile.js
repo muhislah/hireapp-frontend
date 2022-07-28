@@ -38,7 +38,7 @@ const Profile = () => {
                <p className='h6'><img src={location} alt='location'/><span className='text-muted ml-3'>{data.employee[0]?.address ? data.employee[0].address : "Not set"}</span> </p>
                <p className='text-muted my-3'>Freelancer</p>
                <p className='text-muted w-50'>{data.employee.length > 0 && data.employee[0].description}</p>
-               <button className={style.button} onClick={() => navigate('/hire')}>Hire</button>
+               <button className={style.button} onClick={() => navigate('/company/hire/'+idemployee)}>Hire</button>
             </div>
             <h3>Skill</h3>
             <div className={style.skills+' w-25'} >
