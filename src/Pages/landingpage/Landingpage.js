@@ -4,9 +4,9 @@ import talenta from './talenta.png'
 import whyshould from './whyshould.png'
 import skilltalent from './skilltalent.png'
 import check from './check.svg'
-import Footer from '../../Components/module/Footer/Footer'
 import yellowcheck from './yellowcheck.svg'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../../Components/module/Footer/Footer'
 
 const LandingPage = () => {
    const navigate = useNavigate()
