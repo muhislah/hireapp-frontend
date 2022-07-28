@@ -16,11 +16,11 @@ const Card = ({name, job, address, skills, id, img}) => {
       </div>
       <div className={style.profiledetail}>
          <p className='font-weight-bold ' style={{fontSize: '20px', cursor: "pointer"}} onClick={() => navigate('/employee/'+id)}>{name}</p>
-         <p className='text-muted'>{job}</p>
-         <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>{address}</span></p>
+         <p className='text-muted'>{job || 'No Tagline..'}</p>
+         <p className='text-muted'><img src={maps} alt='location'/><span className='ml-2'>{address || "Address not Set"}</span></p>
          <div className={style.skills} >
           {
-            skills?.length > 0 ? skills.map((skill) => <div className={style.skill}>{skill}</div>) : ''
+            skills?.length > 0 ? skills.map((skill) => <div className={style.skill}>{skill}</div>) : <p className='text-muted'>No Skill Includes</p>
           }
             
 

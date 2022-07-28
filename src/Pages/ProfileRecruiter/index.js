@@ -11,69 +11,91 @@ import { companyAction } from '../../Configs/redux/actions/companyAction'
 const ProfileRecuiter = () => {
     const { company: { data: company } } = useSelector(state => state)
     const token = localStorage.getItem('token')
-    const dispatch = useDispatch()
     const navigate = useNavigate()
-    useEffect(() => {
-        dispatch(companyAction(token))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
     return (
         <Fragment>
             <Header />
-            <div className={styles.body}>
+            {
+                company &&
+                (
+                    <div className={styles.body}>
+                        <div className={styles.Box}>
+                            <div className={styles.Head}>
+                                <img src={company?.image} className={styles.Ellipse} />
+                                <div className={styles.Content}>
+                                    <p className={styles.CompanyName}>
+                                        {company.company && company.company}
+                                    </p>
+                                    <p className={styles.CompanyRole}>{company?.companyfield}</p>
+                                    <p className={styles.WrapperLoct}>
+                                        <FontAwesomeIcon
+                                            className={styles.MapsIcon}
+                                            icon={faLocationDot}
+                                        />{" "}
+                                        <span className={styles.CompanyAdress}>
+                                            {company?.address}
+                                        </span>
+                                    </p>
+                                    <p className={styles.Desciption}>
+                                        {
+                                            company?.companydescription
+                                        }
+                                    </p>
+                                </div>
+                                <div>
+                                    <button
+                                        className={styles.btn}
+                                        onClick={() => navigate("/company/profile/edit")}
+                                    >
+                                        Edit Profile
+                                    </button>
+                                </div>
+                                <div className={styles.SocialMedia}>
+                                    {company?.email &&
+                                        (
+                                            <p className={styles.Email}>
+                                                <FontAwesomeIcon icon={faEnvelope} /> {company.email}
+                                            </p>
 
-                <div className={styles.Box}>
-                    <div className={styles.Head}>
-                        <div className={styles.Ellipse}>
-                            <div className={styles.Content}>
-                                <p className={styles.CompanyName}>
-                                    {company.company && company.company}
-                                </p>
-                                <p className={styles.CompanyRole}>Finance</p>
-                                <p className={styles.WrapperLoct}>
-                                    <FontAwesomeIcon
-                                        className={styles.MapsIcon}
-                                        icon={faLocationDot}
-                                    />{" "}
-                                    <span className={styles.CompanyAdress}>
-                                        Purwokerto, Jawa Tengah
-                                    </span>
-                                </p>
-                                <p className={styles.Desciption}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Vestibulum erat orci, mollis nec gravida sed, ornare quis urna.
-                                    Curabitur eu lacus fringilla, vestibulum risus at.
-                                </p>
-                            </div>
-                            <div>
-                                <button
-                                    className={styles.btn}
-                                    onClick={() => navigate("/company/profile/edit")}
-                                >
-                                    Edit Profile
-                                </button>
-                            </div>
-                            <div className={styles.SocialMedia}>
-                                <p className={styles.Email}>
-                                    <FontAwesomeIcon icon={faEnvelope} /> martabatjaya@gmail.com
-                                </p>
-                                <p className={styles.Instagram}>
-                                    <i className="fa-brands fa-instagram"></i> martabat_jaya
-                                </p>
-                                <p className={styles.Phone}>
-                                    <FontAwesomeIcon icon={faPhone} /> 0821-8190-1821
-                                </p>
-                                <p className={styles.LinkedIn}>
-                                    <i className="fa-brands fa-linkedin"></i> Martabat Jaya Abadi
-                                </p>
+                                        )
+                                    }
+                                    {company?.instagram &&
+                                        (
+                                            <p className={styles.Instagram}>
+                                                <i className="fa-brands fa-instagram"></i> {company.instagram}
+                                            </p>
+
+                                        )
+                                    }
+                                    {company?.phonenumber &&
+                                        (
+                                            <p className={styles.Phone}>
+                                                <FontAwesomeIcon icon={faPhone} /> {company.phonenumber}
+                                            </p>
+
+                                        )
+                                    }
+                                    {company?.linkedin &&
+                                        (
+                                            <p className={styles.LinkedIn}>
+                                                <i className="fa-brands fa-linkedin"></i> {company.linkedin}
+                                            </p>
+
+                                        )
+                                    }
+
+
+
+                                </div>
                             </div>
                         </div>
+                        <div className={styles.footer}>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.footer}>
-                </div>
-                <Footer />
-            </div>
+                )
+            }
+
+            <Footer />
         </Fragment>
     );
 }

@@ -7,8 +7,7 @@ export const createHire = (data, navigate) => async (dispacth) => {
     const createdAt = await axios.post(
       `https://hire-jobs.herokuapp.com/hirejob`,
       data,
-      {
-        headers: {
+      {  headers: {
           Authorization: `Bearer ${token}`,
         },
       }

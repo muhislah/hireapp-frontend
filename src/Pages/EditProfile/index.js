@@ -139,7 +139,7 @@ const EditProfilCompany = () => {
         <button onClick={onSubmit} type="submit" className={styles.BtnSave}>
           Simpan
         </button>
-        <Link to="/profilerecruiter">
+        <Link to="/company/profile">
           <button className={styles.BtnCancel}>Batal</button>
         </Link>
       </div>

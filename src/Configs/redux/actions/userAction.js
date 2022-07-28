@@ -1,4 +1,5 @@
 import axios from "axios";
+import { companyAction } from "./companyAction";
 
 export const loginUser = (dataForm, navigate)=> async(dispatch)=>{
     try {
@@ -14,11 +15,8 @@ export const loginUser = (dataForm, navigate)=> async(dispatch)=>{
         dispatch({type: 'USER_LOGIN_SUCCESS', payload: user})
 
         alert("Anda berhasil Login");
-       dispatch({
-         type: "USER_LOGIN_SUCCESS",
-         token: token.data,
-         payload: user,
-       });
+       dispatch({type: "USER_LOGIN_SUCCESS",payload: user});
+       dispatch(companyAction(token))
        dispatch({type: 'LOGIN_SUCCESS', payload: {
         ...user,
         role : "company"

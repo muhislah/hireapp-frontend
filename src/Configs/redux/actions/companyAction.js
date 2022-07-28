@@ -8,7 +8,7 @@ export const companyAction = (token) => async (dispatch) => {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = result.data.data;
-    dispatch({ type: "GET_COMPANY", payload: data });
+    dispatch({ type: "GET_COMPANY", payload: data[0]});
   } catch (error) {
     console.log(error);
   }

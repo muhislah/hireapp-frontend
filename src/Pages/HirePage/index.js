@@ -45,14 +45,15 @@ const Hire = () => {
   // create Hire
   const navigate = useNavigate();
   const onSubmit = (e) => {
-    const data = new FormData();
-    data.append("fullname", fullname);
-    data.append("email", email);
-    data.append("hp", hp);
-    data.append("deskripsi", deskripsi);
-    data.append("tujuan", tujuan);
-    data.append("idemployee", idHire);
-    data.append("idcompany", company[0].idcompany);
+    const data = {
+      fullname,
+      email,
+      hp,
+      deskripsi,
+      tujuan,
+      idemployee : idHire,
+      idcompany : company[0].idcompany
+    }
     e.preventDefault();
     dispatch(createHire(data, navigate));
     Swal.fire({
