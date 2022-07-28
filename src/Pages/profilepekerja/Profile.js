@@ -28,7 +28,7 @@ const Profile = () => {
       <>
          <Header />
          {
-            data ?
+            data?.employee[0] ?
                (
                   <div className={style.main}>
                      <div className={style.container + " d-flex flex-column align-items-center"}>
