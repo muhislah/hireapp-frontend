@@ -7,8 +7,10 @@ import Footer from "../../Components/module/Footer/Footer";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useDispatch } from "react-redux";
 
 const EditProfilCompany = () => {
+  const dispatch = useDispatch()
   const [companyfield, setCompanyfield] = useState("");
   const [address, setAddress] = useState("");
   const [companydescription, setCompanydescription] = useState("");
@@ -26,6 +28,7 @@ const EditProfilCompany = () => {
   );
 
   const onImageUpload = (e) => {
+    
     const file = e.target.files[0];
     setImage(file);
     console.log(file);
@@ -59,7 +62,7 @@ const EditProfilCompany = () => {
       )
       .then((res) => {
         console.log(res);
-        navigate("/profilerecruiter");
+        navigate("/company/profile");
         Swal.fire({
           icon: "success",
           title: "Berhasil mengupdate users",

@@ -21,7 +21,9 @@ const Navbar = ({type}) => {
    }else {
       return (
          <div className={style.navbar}>
-          <img src={notif} alt='notification' />
+          <img src={notif} alt='notification' style={{
+            cursor : 'pointer'
+          }} onClick={() => navigate('/history')} />
           <img src={message} alt='chat' />
           <div className={style.profile} >
             <img src={example} alt="profile" style={{cursor : 'pointer'}} onClick={() => navigate(link)}/>

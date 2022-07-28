@@ -9,9 +9,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { companyAction } from '../../Configs/redux/actions/companyAction'
 
 const ProfileRecuiter = () => {
+    const dispatch = useDispatch()
     const { company: { data: company } } = useSelector(state => state)
     const token = localStorage.getItem('token')
     const navigate = useNavigate()
+    useEffect(() => {
+        dispatch(companyAction(token))
+    },[])
     return (
         <Fragment>
             <Header />
@@ -23,9 +27,9 @@ const ProfileRecuiter = () => {
                             <div className={styles.Head}>
                                 <img src={company?.image} className={styles.Ellipse} />
                                 <div className={styles.Content}>
-                                    <p className={styles.CompanyName}>
+                                    <h4 className="font-weight-bold">
                                         {company.company && company.company}
-                                    </p>
+                                    </h4>
                                     <p className={styles.CompanyRole}>{company?.companyfield}</p>
                                     <p className={styles.WrapperLoct}>
                                         <FontAwesomeIcon
@@ -42,18 +46,18 @@ const ProfileRecuiter = () => {
                                         }
                                     </p>
                                 </div>
-                                <div>
+                                <div className='d-flex align-items-center'>
                                     <button
-                                        className={styles.btn}
+                                        className="my-3"
                                         onClick={() => navigate("/company/profile/edit")}
                                     >
                                         Edit Profile
                                     </button>
                                 </div>
-                                <div className={styles.SocialMedia}>
+                                <div className="d-flex flex-column justify-content-center mx-auto">
                                     {company?.email &&
                                         (
-                                            <p className={styles.Email}>
+                                            <p className="mx-auto">
                                                 <FontAwesomeIcon icon={faEnvelope} /> {company.email}
                                             </p>
 
@@ -61,7 +65,7 @@ const ProfileRecuiter = () => {
                                     }
                                     {company?.instagram &&
                                         (
-                                            <p className={styles.Instagram}>
+                                            <p className="mx-auto">
                                                 <i className="fa-brands fa-instagram"></i> {company.instagram}
                                             </p>
 
@@ -69,7 +73,7 @@ const ProfileRecuiter = () => {
                                     }
                                     {company?.phonenumber &&
                                         (
-                                            <p className={styles.Phone}>
+                                            <p className="mx-auto">
                                                 <FontAwesomeIcon icon={faPhone} /> {company.phonenumber}
                                             </p>
 
@@ -77,19 +81,15 @@ const ProfileRecuiter = () => {
                                     }
                                     {company?.linkedin &&
                                         (
-                                            <p className={styles.LinkedIn}>
+                                            <p className="mx-auto">
                                                 <i className="fa-brands fa-linkedin"></i> {company.linkedin}
                                             </p>
 
                                         )
                                     }
 
-
-
                                 </div>
                             </div>
-                        </div>
-                        <div className={styles.footer}>
                         </div>
                     </div>
                 )

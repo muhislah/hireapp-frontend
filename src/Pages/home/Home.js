@@ -50,7 +50,10 @@ const Home = () => {
     <>
       <Header />
       <div className={style.topcode +' d-flex align-items-center'}>
-         <h3 className='font-weight-medium text-white'>Top Jobs</h3>
+         <h3 className='font-weight-medium text-white' style={{
+            fontSize : "20px",
+            marginTop : '5px'
+         }}>Talents</h3>
       </div>
       <div className={style.mainbody} >
       <div className={style.container}>

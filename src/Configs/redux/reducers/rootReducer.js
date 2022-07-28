@@ -3,6 +3,7 @@ import authEmployeeReducer from './authEmployeeReducer'
 import companyReducer from './companyReducer'
 import detailEmployeeReducer from './detailEmployeeReducer'
 import employeeReducer from './employeeReducer'
+import notificationReducer from './notificationReducer'
 import profileEmployeeReducer from './profileEmployeeReducer'
 import { userReducer } from './userReducer'
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     user : userReducer,
     auth : authEmployeeReducer,
     company : companyReducer,
+    notification : notificationReducer
     
    //  tambahkan reducer disini
 })

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={style.footer}>
       <img className='mb-3' src={logo} alt='logo' />
       <br></br>
-      <p className='d-inline-block w-50'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.</p>
+      <p className='d-inline-block w-50'>Bersama memajukan bangsa dalam mengembangkan sumber daya manusia yang berkualitas.</p>
       <hr style={{borderTop : '2px solid white'}}/>
       <div className='d-flex justify-content-between'>
          <p>2020 Pewworld. All right reserved</p>
