@@ -12,14 +12,17 @@ export const loginUser = (dataForm, navigate)=> async(dispatch)=>{
         localStorage.setItem("token", token);
         localStorage.setItem("refreshToken", user.refreshToken);
         dispatch({type: 'USER_LOGIN_SUCCESS', payload: user})
-        alert("Anda berhasil Login");
-        
 
+        alert("Anda berhasil Login");
        dispatch({
          type: "USER_LOGIN_SUCCESS",
          token: token.data,
          payload: user,
        });
+       dispatch({type: 'LOGIN_SUCCESS', payload: {
+        ...user,
+        role : "company"
+       }})
         navigate('/home')
 
     } catch (error) {

@@ -6,6 +6,15 @@
     top: 50px;
     background: #5E50A1;
 }
+.faPencil{
+    cursor: pointer;
+}
+.profiles{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
 .WrapperProfil{
     position: absolute;
     width: 357px;

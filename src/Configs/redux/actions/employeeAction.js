@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const employeeAction = (page = "", search = "", sort ="asc", sortBy="name") => async(dispatch) =>{
+export const employeeAction = (page = 1, search = "", sort ="asc", sortBy="name") => async(dispatch) =>{
 
       try {
          const result = await axios.get(process.env.REACT_APP_BACKEND_API+`/employee?search=${search}&sort=${sort}&sortby=${sortBy}&page=${page}`)

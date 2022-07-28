@@ -39,11 +39,11 @@ export const employeeLogin = (user, navigate) => async(dispatch) =>{
   try {
      dispatch({type: 'LOGIN_PENDING'})
      const result = await axios.post(`https://hire-jobs.herokuapp.com/authEmployee/login`, user)
-     const data = result.data
+     const data = result.data.data
      dispatch({type: 'LOGIN_SUCCESS', payload: data})
-     dispatch(profileEmployee(data.data.token))
-      if (data.message == 'anda berhasil login'){
-        localStorage.setItem('token', data.data.token)
+     dispatch(profileEmployee(data.token))
+      if (data){
+        localStorage.setItem('token', data.token)
         navigate('/profile')
       }
   } catch (error) {

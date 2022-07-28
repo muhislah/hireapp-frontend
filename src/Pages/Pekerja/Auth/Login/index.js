@@ -33,7 +33,7 @@ const LoginPekerja = () => {
             <img src={bg} alt="" className={style.baligho+' position-absolute'}/>
             <img src={mask} alt="" className={style.masking+' position-absolute'}/>
             <img src={logo} alt="" className={style.logo+ " position-absolute"}/>
-            <h1 className={style.tagline +' position-absolute font-weight-bold m-auto' }>Temukan developer berbakat & terbaik di berbagai bidang keahlian</h1>
+            <h1 className={style.tagline +' position-absolute font-weight-bold m-auto' }>Jadilah developer berbakat & terbaik di berbagai bidang keahlian</h1>
           </div>
         </div>
         <div className='col-6 d-flex flex-column justify-content-center p-5 pr-8'>

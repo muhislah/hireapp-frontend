@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
     detailEmployee : detailEmployeeReducer,
     profileEmployee: profileEmployeeReducer,
     user : userReducer,
-    authEmployee : authEmployeeReducer,
+    auth : authEmployeeReducer,
     company : companyReducer,
     
    //  tambahkan reducer disini

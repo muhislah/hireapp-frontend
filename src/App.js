@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Login from './Pages/Perekrut/Auth/Login'
@@ -17,6 +18,7 @@ import Edit from './Pages/editpekerja/Edit';
 import MyProfile from './Pages/myprofile/Profile';
 import MyPortfolios from './Pages/myprofile/page/Portfolios';
 import MyExperience from './Pages/myprofile/page/Experience';
+import { IsCompany, IsEmployee, IsLogin, RemoveToken } from './Configs/redux/route/privateRoute';
 
 
 function App() {
@@ -24,13 +26,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/" replace="true"/>}/>
-        <Route path="/company/login" element={<Login/>}/>
-        <Route path="/company/register" element={<Register/>}/>
-        <Route path="/login" element={<LoginPekerja/>}/>
-        <Route path="/register" element={<RegisterPekerja/>}/>
-        <Route path="/company/profile" element={<ProfileRecuiter/>}/>
-        <Route path="/company/profile/edit" element={<EditProfilCompany/>}/>
-        <Route path="/company/hire" element={<Hire/>}/>
+        <Route path="/company/login" element={ <RemoveToken><Login/></RemoveToken>}/>
+        <Route path="/company/register" element={<RemoveToken><Register/></RemoveToken>}/>
+        <Route path="/login" element={<RemoveToken><LoginPekerja /></RemoveToken>}/>
+        <Route path="/register" element={<RemoveToken><RegisterPekerja/></RemoveToken>}/>
+        <Route path="/company/profile" element={<IsCompany><ProfileRecuiter/></IsCompany>}/>
+        <Route path="/company/profile/edit" element={<IsCompany><EditProfilCompany/></IsCompany>}/>
+        <Route path="/company/hire" element={<IsCompany><Hire/></IsCompany>}/>
         <Route path="/landingpage" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/employee/:idemployee" element={<Profile />}>
@@ -38,13 +40,13 @@ function App() {
           <Route path="portfolio" element={<Portfolios />} />
           <Route path="experience" element={<Experience />} />
         </Route>
-        <Route path="/profile" element={<MyProfile />}>
+        <Route path="/profile" element={<IsEmployee><MyProfile /></IsEmployee>}>
           <Route index element={<MyPortfolios />} />
           <Route path="portfolio" element={<MyPortfolios />} />
           <Route path="experience" element={<MyExperience />} />
         </Route>
-        <Route path='/company/hire/:idHire' element={<Hire />} />
-        <Route path="/edit" element={<Edit />} />
+        <Route path='/company/hire/:idHire' element={<IsCompany><Hire /></IsCompany>} />
+        <Route path="/edit" element={<IsEmployee><Edit /></IsEmployee>} />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
     </BrowserRouter>
