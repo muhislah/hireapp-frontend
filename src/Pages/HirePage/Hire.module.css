@@ -8,6 +8,11 @@
     border-radius: 8px;
     box-shadow: 0px 10px 50px rgba(132, 132, 132, 0.25);
 }
+.simpan{
+    position: absolute;
+    left: 400px;
+    top: 640px;
+}
 .imgProfil{
     position: absolute;
     width: 150px;
@@ -15,7 +20,6 @@
     left: 94px;
     top: 30px;
     border-radius: 50%;
-    border: 1px black solid;
 }
 .Content{
     position: absolute;

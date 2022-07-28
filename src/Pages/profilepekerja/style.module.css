@@ -34,6 +34,12 @@
 p > img {
    height: 20px;
 }
+<<<<<<< HEAD
+=======
+.buttons{
+   width: 100px !important;
+}
+>>>>>>> 2a6f486c23ec759314fecaa4cd334f8346ec1152
 .profile button {
    width: 25%;
    height: 50px;

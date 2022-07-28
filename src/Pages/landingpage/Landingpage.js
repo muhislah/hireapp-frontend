@@ -4,7 +4,11 @@ import talenta from './talenta.png'
 import whyshould from './whyshould.png'
 import skilltalent from './skilltalent.png'
 import check from './check.svg'
+<<<<<<< HEAD
 import Footer from '../../Components/module/Footer/Footer'
+=======
+import Footer from '../../Components/Module/Footer/Footer'
+>>>>>>> 2a6f486c23ec759314fecaa4cd334f8346ec1152
 import yellowcheck from './yellowcheck.svg'
 
 const LandingPage = () => {

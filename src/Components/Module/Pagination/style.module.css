@@ -1,0 +1,25 @@
+.pagination {
+   width: auto;;
+   margin: 0 auto;
+   display: flex;
+   gap: 5px;
+}
+.page {
+   width: 58px;
+   height: 58px;
+   background: #FFFFFF;
+   border: 1px solid #E2E5ED;
+   border-radius: 4px;
+   color: #E2E5ED;
+   cursor: pointer;
+}
+.page[selected] {
+   background-color: #5E50A1;
+   color: white;
+   border:none
+}
+.active {
+   background-color: #5E50A1;
+   color: white;
+   border: none
+}
