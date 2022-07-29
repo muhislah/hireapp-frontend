@@ -1,4 +1,5 @@
 import axios from "axios";
+import { getNotification } from "./companyAction";
 
 export const profileEmployee = (token) => async(dispatch) =>{
       try {
@@ -41,6 +42,7 @@ export const employeeLogin = (user, navigate) => async(dispatch) =>{
      const result = await axios.post(`https://hire-jobs.herokuapp.com/authEmployee/login`, user)
      const data = result.data.data
      dispatch({type: 'LOGIN_SUCCESS', payload: data})
+     dispatch(getNotification(data.token))
      dispatch(profileEmployee(data.token))
       if (data){
         localStorage.setItem('token', data.token)

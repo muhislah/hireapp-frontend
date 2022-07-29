@@ -176,7 +176,7 @@ const Edit = () => {
 
    const handleSubmitProfile = async () => {
       try {
-         const result = await updateProfile(user, image, token)
+         const result = await updateProfile(user, image, token, navigate)
          console.log(result)
          dispatch(profileEmployee(token))
       } catch (error) {

@@ -11,7 +11,6 @@ const History = () => {
       <Header />
       <div className={style.body + " " + 'container-fluid'}>
         <h3 className='text-center my-3'>History of Hiring</h3>
-        <div className={style.id + ' mx-auto'}>Company : {notification ? notification[0]?.company : "Tidak ada Daftar"}</div>
         <div className='container '>
 
           {notification?.length > 0 ? (
@@ -20,10 +19,10 @@ const History = () => {
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Hire Person</th>
-                  <th scope="col">Email</th>
                   <th scope="col">Tujuan</th>
                   <th scope="col">Deskripsi</th>
-                  <th scope="col">Tertuju</th>
+                  <th scope="col">Company Email</th>
+                  <th scope="col">Employee</th>
                 </tr>
               </thead>
               <tbody>
@@ -33,10 +32,10 @@ const History = () => {
                       <tr>
                         <th scope="row">{index+1}</th>
                         <td>{data.fullnamehire}</td>
-                        <td>{data.emailhirejob}</td>
-                        <td>{data.tujuan}</td>
-                        <td>{data.deskripsi}</td>
-                        <td>{data.idemployee}</td>
+                        <td>{data.hiretujuan}</td>
+                        <td>{data.deskripsihirejob}</td>
+                        <td>{data.emailcompany}</td>
+                        <td>{data.fullname}</td>
                       </tr>
                     )
                   })

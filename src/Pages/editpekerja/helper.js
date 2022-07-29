@@ -52,7 +52,7 @@ export const deleteExperience = async (id, token) => {
   }
 }
 
-export const updateProfile = async (user, image, token) => {
+export const updateProfile = async (user, image, token, navigate) => {
   try {
     let profile = new FormData();
     user.fullname && profile.append('fullname', user.fullname);
@@ -74,6 +74,10 @@ export const updateProfile = async (user, image, token) => {
       data: profile
     }
     const result = await axios(config)
+    if(result){
+      alert('success update data')
+      navigate('/profile')
+    }
     const datas = result.data.data
     return datas
   } catch (error) {
