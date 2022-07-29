@@ -9,6 +9,7 @@ export const register = async (user) => {
   }
   try {
     const result = await axios(config)
+    console.log(result)
     return result.data
   } catch (error) {
     console.log(error)

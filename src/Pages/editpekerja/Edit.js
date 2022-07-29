@@ -434,7 +434,7 @@ const Edit = () => {
                                     }} />
                                  </div>
                                  <hr className='my-4' />
-                                 <button className='px-4' onClick={handleSubmitPorto} disabled={porto.nameapp == '' || porto.respository == "" || porto.type == ""}>Tambah Portofolio</button>
+                                 <button className='px-4' onClick={handleSubmitPorto} disabled={porto.nameapps == '' || porto.respository == "" || porto.type == ""}>Tambah Portofolio</button>
                               </div>
                            </div>
                         </div>

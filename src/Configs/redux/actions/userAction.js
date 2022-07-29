@@ -59,11 +59,21 @@ export const registerUser = (dataForm, navigate) => async (dispatch) => {
     localStorage.setItem("token", user.token);
     localStorage.setItem("refreshToken", user.refreshToken);
     dispatch({ type: "USER_REGISTER_SUCCESS", payload: user });
-    navigate("/login");
-    alert("Anda berhasil daftar")
+    Swal.fire({
+      title: 'Success!',
+      text: 'Registrasi Berhasil',
+      icon: 'success',
+      confirmButtonText: 'Oke'
+    })
+    navigate("/company/login");
   } catch (error) {
     console.log(error);
-    alert("User sudah terdaftar")
+    Swal.fire({
+      title: 'Error!',
+      text: 'Registrasi Gagal',
+      icon: 'error',
+      confirmButtonText: 'Oke'
+    })
   }
 };
 
