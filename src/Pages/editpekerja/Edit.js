@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../../Components/module/Footer/Footer'
 import Header from '../../Components/module/Header/Header'
 import style from './style.module.css'
-import photo from './photo.png'
+import photo from './noimage.jpg'
 import map from './map.svg'
 import drag from './dragndrop.svg'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,8 +10,23 @@ import { addExperience, addPortofolio, deleteExperience, deletePortfolio, update
 import { profileEmployee } from '../../Configs/redux/actions/profileEmployee'
 import x from './x.svg'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 
 const Edit = () => {
+   const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    
    const navigate = useNavigate()
    const { profileEmployee: { profile } } = useSelector(state => state)
    const { profileEmployee: { portofolio : myPortofolio } } = useSelector(state => state)
@@ -90,7 +105,10 @@ const Edit = () => {
          if(token) {
             const result = await deleteExperience(id, token)
             if(result){
-               alert('succes delete')
+               Toast.fire({
+                  icon: 'success',
+                  title: 'Experience Deleted'
+                })
                dispatch(profileEmployee(token))
             }
          }else {
@@ -109,7 +127,10 @@ const Edit = () => {
          if(token) {
             const result = await deletePortfolio(id, token)
             if(result){
-               alert('succes delete')
+               Toast.fire({
+                  icon: 'success',
+                  title: 'Portfolio Deleted'
+                })
                dispatch(profileEmployee(token))
             }
          }else {
@@ -148,7 +169,10 @@ const Edit = () => {
             preview: null
          })
          dispatch(profileEmployee(token))
-         alert('success add Portfolio')
+         Toast.fire({
+            icon: 'success',
+            title: 'Portfolio Added'
+          })
       } catch (error) {
          console.log(error)
       }
@@ -168,7 +192,10 @@ const Edit = () => {
             idemployee: ''
          })
          dispatch(profileEmployee(token))
-         alert('success add experience')
+         Toast.fire({
+            icon: 'success',
+            title: 'Experience Added'
+          })
       }else {
          console.log('need token')
       }
@@ -178,6 +205,12 @@ const Edit = () => {
       try {
          const result = await updateProfile(user, image, token, navigate)
          console.log(result)
+         if(result){
+            Toast.fire({
+               icon: 'success',
+               title: 'Profill Updated'
+             })
+         }
          dispatch(profileEmployee(token))
       } catch (error) {
          console.log('error')

@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './style.module.css'
 import maps from './location.svg'
-import profile from './profile.png'
+import profile from './noimage.jpg'
 import { useNavigate } from 'react-router'
 import { useDispatch } from 'react-redux'
 import { employeeAction } from '../../../Configs/redux/actions/employeeAction'

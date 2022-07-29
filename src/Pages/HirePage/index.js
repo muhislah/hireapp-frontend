@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { companyAction } from "../../Configs/redux/actions/companyAction";
 import { createHire } from "../../Configs/redux/actions/hireActions";
 import { detailEmployeeAction } from "../../Configs/redux/actions/detailEmployeeAction";
+import photo from './noimage.jpg'
 
 const Hire = () => {
   const dispatch = useDispatch();
@@ -69,7 +70,7 @@ const Hire = () => {
       <div className={styles.WrapperProfil}>
         <div className={styles.imgProfil}>
           <img
-            src={data.employee.length > 0 ? data.employee[0].image_profil : ""}
+            src={data.employee.length > 0 ? data.employee[0].image_profil : photo}
             width="160px"
             height="160px"
             alt=""

@@ -1,4 +1,16 @@
 import axios from 'axios'
+import Swal from 'sweetalert2'
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
 
 export const addExperience = async (user, token) => {
   try {
@@ -75,7 +87,10 @@ export const updateProfile = async (user, image, token, navigate) => {
     }
     const result = await axios(config)
     if(result){
-      alert('success update data')
+      Toast.fire({
+        icon: 'success',
+        title: 'Profill Updated'
+      })
       navigate('/profile')
     }
     const datas = result.data.data

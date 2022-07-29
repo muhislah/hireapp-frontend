@@ -5,9 +5,17 @@
     box-sizing: border-box;
     position: relative;
 }
+.button {
+    width: 25%;
+   height: 50px;
+   background-color: #5E50A1;
+   border-radius: 4px;
+   color: white;
+   border: none
+}
 .Box{
     width: 80%;
-    height: 800px;
+    height: 900px;
     box-sizing: border-box;
     margin : auto;
     background: #FFFFFF;

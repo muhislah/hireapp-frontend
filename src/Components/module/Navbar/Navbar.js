@@ -2,13 +2,15 @@ import React from 'react'
 import style from './style.module.css'
 import message from './message.svg'
 import notif from './notif.svg'
-import example from './example.png'
+import example from './noimage.jpg'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 
 const Navbar = ({type}) => {
    const { auth : { data : { role }}} = useSelector(state=>state)
+   const { auth : { data : { image }}} = useSelector(state=>state)
+   const {company : {data : {image : imageCompany}}} = useSelector(state => state)
    const link = (role === 'company') ? '/company/profile' : '/profile'
    const navigate = useNavigate()
    if (type === 'notLogged'){
@@ -26,7 +28,7 @@ const Navbar = ({type}) => {
           }} onClick={() => navigate('/history')} />
           <img src={message} alt='chat' />
           <div className={style.profile} >
-            <img src={example} alt="profile" style={{cursor : 'pointer'}} onClick={() => navigate(link)}/>
+            <img src={image ? image : imageCompany || example} alt="profile" style={{cursor : 'pointer'}} onClick={() => navigate(link)}/>
           </div>
          </div>
        )

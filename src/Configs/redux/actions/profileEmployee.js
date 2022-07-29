@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getNotification } from "./companyAction";
+import Swal from 'sweetalert2'
 
 export const profileEmployee = (token) => async(dispatch) =>{
       try {
@@ -41,6 +42,20 @@ export const employeeLogin = (user, navigate) => async(dispatch) =>{
      dispatch({type: 'LOGIN_PENDING'})
      const result = await axios.post(`https://hire-jobs.herokuapp.com/authEmployee/login`, user)
      const data = result.data.data
+     if(result.data.message === "email atau password anda salah"){
+      return Swal.fire({
+        title: 'Caution!',
+        text: 'Email / Password Salah',
+        icon: 'warning',
+        confirmButtonText: 'Oke'
+      })
+     }
+     Swal.fire({
+      title: 'Success!',
+      text: 'Login Berhasil',
+      icon: 'success',
+      confirmButtonText: 'Oke'
+    })
      dispatch({type: 'LOGIN_SUCCESS', payload: data})
      dispatch(getNotification(data.token))
      dispatch(profileEmployee(data.token))
@@ -49,6 +64,12 @@ export const employeeLogin = (user, navigate) => async(dispatch) =>{
         navigate('/profile')
       }
   } catch (error) {
-     console.log(error)
+    console.log(error)
+     return Swal.fire({
+      title: 'Caution!',
+      text: 'Email / Password Salah',
+      icon: 'warning',
+      confirmButtonText: 'Oke'
+    })
   }   
 }

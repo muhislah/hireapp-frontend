@@ -24,7 +24,7 @@ const EditProfilCompany = () => {
   const [phonenumber, setPhonenumber] = useState("");
   const [imagePreview, setImagePreview] = useState(
     image ||
-      "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Kurt&hairColor=BlondeGolden&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Pale"
+      "./noimage.jpg"
   );
 
   const onImageUpload = (e) => {

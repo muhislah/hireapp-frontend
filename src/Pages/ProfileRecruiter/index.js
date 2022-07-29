@@ -7,6 +7,7 @@ import Footer from '../../Components/module/Footer/Footer'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { companyAction } from '../../Configs/redux/actions/companyAction'
+import photo from './noimage.jpg'
 
 const ProfileRecuiter = () => {
     const dispatch = useDispatch()
@@ -16,6 +17,11 @@ const ProfileRecuiter = () => {
     useEffect(() => {
         dispatch(companyAction(token))
     },[])
+
+    const handleLogout = () => {
+        navigate('/company/login')
+     }
+  
     return (
         <Fragment>
             <Header />
@@ -25,7 +31,7 @@ const ProfileRecuiter = () => {
                     <div className={styles.body}>
                         <div className={styles.Box}>
                             <div className={styles.Head}>
-                                <img src={company?.image} className={styles.Ellipse} />
+                                <img src={company?.image || photo} className={styles.Ellipse} />
                                 <div className={styles.Content}>
                                     <h4 className="font-weight-bold">
                                         {company.company && company.company}
@@ -87,10 +93,11 @@ const ProfileRecuiter = () => {
 
                                         )
                                     }
-
+                                <button className={styles.button} onClick={() => handleLogout()}>Logout</button>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 )
             }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/module/Header/Header'
 import style from './style.module.css'
-import photo from './photo.jpg'
+import photo from './noimage.jpg'
 import location from './location.svg'
 import mail from './mail.svg'
 import instagram from './instagram.svg'
@@ -9,7 +9,7 @@ import github from './github.svg'
 import { Outlet, useNavigate, useParams } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
 import { detailEmployeeAction } from '../../Configs/redux/actions/detailEmployeeAction'
-import Footer from '../../Components/module/Footer/Footer'
+import Footer from '../../Components/module/Footer/Footer' 
 
 
 const Profile = () => {
@@ -24,6 +24,7 @@ const Profile = () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [])
 
+   
    return (
       <>
          <Header />

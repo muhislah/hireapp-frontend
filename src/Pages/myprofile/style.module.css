@@ -42,6 +42,14 @@ p > img {
    color: white;
    border: none
 }
+.button {
+   width: 25%;
+   height: 50px;
+   background-color: #5E50A1;
+   border-radius: 4px;
+   color: white;
+   border: none
+}
 .profile button:focus {
    outline: none;
    border: none;
