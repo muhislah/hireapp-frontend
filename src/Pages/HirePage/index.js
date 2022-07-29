@@ -45,6 +45,7 @@ const Hire = () => {
   // create Hire
   const navigate = useNavigate();
   const onSubmit = (e) => {
+    e.preventDefault();
     const data = {
       fullname,
       email,
@@ -52,9 +53,8 @@ const Hire = () => {
       deskripsi,
       tujuan,
       idemployee : idHire,
-      idcompany : company[0].idcompany
+      idcompany : company.idcompany
     }
-    e.preventDefault();
     dispatch(createHire(data, navigate));
     Swal.fire({
       icon: "success",
@@ -176,7 +176,7 @@ const Hire = () => {
             <button
               className={`${styles.simpan} btn btn-warning`}
               type="submit"
-              onClick={onSubmit}
+              onClick={(e) =>onSubmit(e)}
             >
               Simpan
             </button>

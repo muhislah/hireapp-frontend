@@ -1,5 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import {getNotification} from './companyAction'
 
 export const createHire = (data, navigate) => async (dispacth) => {
   try {
@@ -14,6 +15,7 @@ export const createHire = (data, navigate) => async (dispacth) => {
     );
     console.log(createdAt);
     dispacth({ type: "HIRE_SUCCESS", payload: createdAt });
+    dispacth(getNotification(token))
     Swal.fire({
       icon: "success",
       title: "Berhasil Memesan",
