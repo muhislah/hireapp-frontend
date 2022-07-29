@@ -35,7 +35,7 @@ const MyProfile = () => {
                   <h3>Skill</h3>
                   <div className={style.skills + ' w-25'} >
                      {
-                        profile ? profile.employee[0]?.skill.map(data => <div className={style.skill}>{data}</div>) : "Not Skill Found"
+                        profile.employee[0]?.skill.length > 0 ? profile.employee[0]?.skill.map(data => <div className={style.skill}>{data}</div>) : "Not Skill Found"
                      }
                   </div>
                   <div className={style.account + ' w-25 mt-4'}>
