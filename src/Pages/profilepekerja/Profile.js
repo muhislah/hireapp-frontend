@@ -49,7 +49,7 @@ const Profile = () => {
                               data.employee[0].skill?.length > 0 ? data.employee[0].skill.map(data => <div className={style.skill}>{data}</div>) : "Not Skill Found"
                            }
                         </div>
-                        <div className={style.account + ' w-25 mt-4'}>
+                        <div className={style.account + ' mt-4'}>
                            <div className='mb-2'><img src={mail} alt="" /><span className='text-muted ml-3'>{data.employee[0]?.email && data.employee[0].email}</span></div>
                            <div className='mb-2'><img src={instagram} alt="" /><span className='text-muted ml-3'>{data.employee[0]?.instagram ? data.employee[0].instagram : "Not set"}</span></div>
                            <div className='mb-2'><img src={github} alt="" /><span className='text-muted ml-3'>{data.employee[0]?.github ? data.employee[0].github : "Not set"}</span></div>

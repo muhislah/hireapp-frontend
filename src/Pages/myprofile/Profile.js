@@ -32,7 +32,7 @@ const MyProfile = () => {
                      <img src={profile.employee[0]?.image ? profile.employee[0].image : photo} alt='photoprofile' />
                      <p id='name' className='h4 mt-3 font-weight-bold'>{profile ? profile?.employee[0]?.fullname : ""}</p>
                      <p className='h6'>{profile ? profile.employee[0]?.jobs : ""}</p>
-                     <p className='h6'><img src={location} alt='location' /><span className='text-muted ml-3'>{profile ? profile?.employee[0]?.address : ""}</span> </p>
+                     <p className='h6'><img src={location} alt='location' /><span className='text-muted ml-3'>{profile ? profile?.employee[0]?.address : "No Location set"}</span> </p>
                      <p className='text-muted my-3'>Freelancer</p>
                      <p className='text-muted w-50'>{profile ? profile.employee[0]?.description : ""}</p>
                      <button className={style.button} onClick={() => navigate('/edit')}>Edit profile</button>
@@ -43,10 +43,10 @@ const MyProfile = () => {
                         profile.employee[0].skill?.length > 0 ? profile.employee[0]?.skill.map(data => <div className={style.skill}>{data}</div>) : "Not Skill Found"
                      }
                   </div>
-                  <div className={style.account + ' w-50 mt-4'}>
-                     <div className='mb-2'><img src={mail} alt="" /><span className='text-muted ml-3'>{profile ? profile?.employee[0].email : ""}</span></div>
-                     <div className='mb-2'><img src={instagram} alt="" /><span className='text-muted ml-3'>{profile ? profile?.employee[0].instagram : ""}</span></div>
-                     <div className='mb-2'><img src={github} alt="" /><span className='text-muted ml-3'>{profile ? profile?.employee[0].github : ""}</span></div>
+                  <div className={style.account + ' mt-4'}>
+                     <div className='mb-2'><img src={mail} alt="" /><span className='text-muted ml-3'>{profile ? profile?.employee[0].email : "email not set"}</span></div>
+                     <div className='mb-2'><img src={instagram} alt="" /><span className='text-muted ml-3'>{profile ? profile?.employee[0].instagram : "instgram not set"}</span></div>
+                     <div className='mb-2'><img src={github} alt="" /><span className='text-muted ml-3'>{profile ? profile?.employee[0].github : "github not set"}</span></div>
                   </div>
                   <button className={style.button+ " my-4"} onClick={() => handleLogout()}>Logout</button>
                   <div className={style.menu + ' mt-5'}>
