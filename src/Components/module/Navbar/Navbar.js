@@ -10,7 +10,10 @@ import { useSelector } from 'react-redux'
 const Navbar = ({type}) => {
    const { auth : { data : { role }}} = useSelector(state=>state)
    const { auth : { data : { image }}} = useSelector(state=>state)
-   const {company : {data : {image : imageCompany}}} = useSelector(state => state)
+   let {company : {data : {image : imageCompany}}} = useSelector(state => state)
+   if ( role == 'employee'){
+    imageCompany = false
+   }
    const link = (role === 'company') ? '/company/profile' : '/profile'
    const navigate = useNavigate()
    if (type === 'notLogged'){
@@ -28,7 +31,7 @@ const Navbar = ({type}) => {
           }} onClick={() => navigate('/history')} />
           <img src={message} alt='chat' />
           <div className={style.profile} >
-            <img src={image ? image : imageCompany || example} alt="profile" style={{cursor : 'pointer'}} onClick={() => navigate(link)}/>
+            <img src={image ? image : imageCompany ? imageCompany : example} alt="profile" style={{cursor : 'pointer'}} onClick={() => navigate(link)}/>
           </div>
          </div>
        )

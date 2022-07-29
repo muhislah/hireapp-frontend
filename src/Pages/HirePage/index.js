@@ -70,7 +70,7 @@ const Hire = () => {
       <div className={styles.WrapperProfil}>
         <div className={styles.imgProfil}>
           <img
-            src={data.employee.length > 0 ? data.employee[0].image_profil : photo}
+            src={data.employee[0]?.image_profil || photo}
             width="160px"
             height="160px"
             alt=""
@@ -108,10 +108,9 @@ const Hire = () => {
               : "TIDAK ADA SKILL"}
           </div>
           <div className={styles.Form}>
-            <p className={styles.TextHead}>Hubungi Louis Tomlinson</p>
+            <p className={styles.TextHead}>Hubungi {data.employee.length > 0 ? data.employee[0].fullname : ""}</p>
             <p className={styles.TextDescript}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              euismod ipsum et dui rhoncus auctor.
+              Hubungi Developers untuk kepentingan project anda, karena kualitas adalah prioritas kami
             </p>
           </div>
           <form action="">

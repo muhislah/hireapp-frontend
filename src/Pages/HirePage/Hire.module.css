@@ -31,7 +31,6 @@
 }
 .CompanyName{
     position: absolute;
-    width: 254px;
     height: 56px;
     left: 10px;
     top: 10px;
@@ -44,7 +43,6 @@
 }
 .CompanyRole{
     position: absolute;
-    width: 58px;
     height: 24px;
     left: 10px;
     top: 70px;
@@ -112,6 +110,7 @@
 }
 .RectangleSkill{
     position: relative;
+    display : flex;
     width: 99px;
     height: 28px;
     left: 0px;
@@ -122,14 +121,13 @@
     border-radius: 4px;
 }
 .TextSkill{
-    position: absolute;
-    align-items: center;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 20px;
     color: #FFFFFF;
+    margin : auto;
 }
 .List{
     margin-left: -50px;
@@ -139,14 +137,14 @@
 }
 .TextHead{
     position: absolute;
-    width: 484px;
+    width: 700px;
     height: 44px;
     left: 388px;
     top: -180px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 44px;
     color: #1F2A36;
 }
