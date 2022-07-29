@@ -21,15 +21,15 @@ const Edit = () => {
       timer: 3000,
       timerProgressBar: true,
       didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
+         toast.addEventListener('mouseenter', Swal.stopTimer)
+         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
-    })
-    
-    
+   })
+
+
    const navigate = useNavigate()
    const { profileEmployee: { profile } } = useSelector(state => state)
-   const { profileEmployee: { portofolio : myPortofolio } } = useSelector(state => state)
+   const { profileEmployee: { portofolio: myPortofolio } } = useSelector(state => state)
    const [skill, setSkill] = useState('')
    const [skills, setSkills] = useState([])
    const [experience, setExperience] = useState([])
@@ -37,42 +37,51 @@ const Edit = () => {
    const dispatch = useDispatch()
    const [image, setImage] = useState()
    const [image2, setImage2] = useState()
-   const [exp, setExp] = useState({})
-   const [porto, setPorto] = useState({})
-   const token  = localStorage.getItem('token')
+   const [exp, setExp] = useState({
+      position: '',
+      namecompany: '',
+      monthyear: '',
+      jobdescription: ''
+   })
+   const [porto, setPorto] = useState({
+      nameapps: "",
+      respository: '',
+      type: ''
+   })
+   const token = localStorage.getItem('token')
    const [user, setUser] = useState({})
 
    const handleChangeProfile = (e) => {
       setUser({
          ...user,
-         [e.target.name] : e.target.value
+         [e.target.name]: e.target.value
       })
    }
 
    const handleImage = (e) => {
-      if(e.target.files.length !== 0){
+      if (e.target.files.length !== 0) {
          setImage({
             file: e.target.files[0],
             preview: URL.createObjectURL(e.target.files[0])
          })
-      }else{
+      } else {
          console.log("add file failed")
       }
    }
 
    const handleDeleteSkill = (value) => {
-      setSkills(current => 
-         current.filter(valueSk => valueSk !== value)   
+      setSkills(current =>
+         current.filter(valueSk => valueSk !== value)
       )
    }
 
    const handleImage2 = (e) => {
-      if(e.target.files.length !== 0){
+      if (e.target.files.length !== 0) {
          setImage2({
             file: e.target.files[0],
             preview: URL.createObjectURL(e.target.files[0])
          })
-      }else{
+      } else {
          console.log("add file failed")
       }
    }
@@ -85,14 +94,14 @@ const Edit = () => {
    useEffect(() => {
       setUser({
          ...user,
-         skill : skills
+         skill: skills
       })
    }, [skills])
 
    useEffect(() => {
       setSkills(profile.employee[0].skill)
       setExperience(profile.experience)
-      if (myPortofolio){
+      if (myPortofolio) {
          setPorfolio(myPortofolio)
       }
    }, [profile])
@@ -102,16 +111,16 @@ const Edit = () => {
          return exp.filter(data => data.idexperience !== id)
       })
       try {
-         if(token) {
+         if (token) {
             const result = await deleteExperience(id, token)
-            if(result){
+            if (result) {
                Toast.fire({
                   icon: 'success',
                   title: 'Experience Deleted'
-                })
+               })
                dispatch(profileEmployee(token))
             }
-         }else {
+         } else {
             console.log('token invalid / or server need token')
          }
       } catch (error) {
@@ -124,16 +133,16 @@ const Edit = () => {
          return exp.filter(data => data.idportfolio !== id)
       })
       try {
-         if(token) {
+         if (token) {
             const result = await deletePortfolio(id, token)
-            if(result){
+            if (result) {
                Toast.fire({
                   icon: 'success',
                   title: 'Portfolio Deleted'
-                })
+               })
                dispatch(profileEmployee(token))
             }
-         }else {
+         } else {
             console.log('token invalid / or server need token')
          }
       } catch (error) {
@@ -144,14 +153,14 @@ const Edit = () => {
    const handleChangeExp = (e) => {
       setExp({
          ...exp,
-         [e.target.name] : e.target.value
+         [e.target.name]: e.target.value
       })
    }
-   
+
    const handleChangePorto = (e) => {
       setPorto({
          ...porto,
-         [e.target.name] : e.target.value,
+         [e.target.name]: e.target.value,
       })
    }
 
@@ -160,9 +169,9 @@ const Edit = () => {
          const result = await addPortofolio(porto, token, image2)
          setPorfolio([...portfolio, result])
          setPorto({
-            nameapps : '',
-            respository : '',
-            type : '',
+            nameapps: '',
+            respository: '',
+            type: '',
          })
          setImage2({
             file: null,
@@ -172,31 +181,31 @@ const Edit = () => {
          Toast.fire({
             icon: 'success',
             title: 'Portfolio Added'
-          })
+         })
       } catch (error) {
          console.log(error)
       }
    }
 
-   
+
    const handleAddExp = async () => {
       console.log(exp)
-      if(token){
+      if (token) {
          const add = await addExperience(exp, token)
-         setExperience([...experience,add])
+         setExperience([...experience, add])
          setExp({
-            position: '', 
-            namecompany: '', 
-            monthyear: '', 
-            jobdescription: '', 
+            position: '',
+            namecompany: '',
+            monthyear: '',
+            jobdescription: '',
             idemployee: ''
          })
          dispatch(profileEmployee(token))
          Toast.fire({
             icon: 'success',
             title: 'Experience Added'
-          })
-      }else {
+         })
+      } else {
          console.log('need token')
       }
    }
@@ -205,11 +214,11 @@ const Edit = () => {
       try {
          const result = await updateProfile(user, image, token, navigate)
          console.log(result)
-         if(result){
+         if (result) {
             Toast.fire({
                icon: 'success',
                title: 'Profill Updated'
-             })
+            })
          }
          dispatch(profileEmployee(token))
       } catch (error) {
@@ -260,34 +269,34 @@ const Edit = () => {
                               <hr />
                               <div className='p-4'>
                                  <p htmlFor="nama">Nama Lengkap</p>
-                                 <input type="text" defaultValue={profile.employee[0].fullname} name="fullname" onChange={(e) => handleChangeProfile(e) } />
+                                 <input type="text" defaultValue={profile.employee[0].fullname} name="fullname" onChange={(e) => handleChangeProfile(e)} />
                                  <p htmlFor="job">Job Desk</p>
-                                 <input type="text" defaultValue={profile.employee[0].jobs} name="jobs" onChange={(e) => handleChangeProfile(e) } />
+                                 <input type="text" defaultValue={profile.employee[0].jobs} name="jobs" onChange={(e) => handleChangeProfile(e)} />
                                  <p htmlFor="domisili">Domisili</p>
-                                 <input type="text" defaultValue={profile.employee[0].address} name="address" onChange={(e) => handleChangeProfile(e) } />
+                                 <input type="text" defaultValue={profile.employee[0].address} name="address" onChange={(e) => handleChangeProfile(e)} />
                                  <p htmlFor="tempatkerja" defaultValue={profile.employee[0].workplace || ""} >Tempat Kerja</p>
-                                 <input type="text" name="work_place" onChange={(e) => handleChangeProfile(e) } />
+                                 <input type="text" name="work_place" onChange={(e) => handleChangeProfile(e)} />
                                  <p htmlFor="deskripsi">Deskripsi singkat</p>
-                                 <textarea className={style.dual} defaultValue={profile.employee[0].description} name="description" onChange={(e) => handleChangeProfile(e) }  />
+                                 <textarea className={style.dual} defaultValue={profile.employee[0].description} name="description" onChange={(e) => handleChangeProfile(e)} />
                               </div>
                            </div>
                            <div className={style.form}>
                               <h3 className='p-4'>Skill</h3>
                               <hr />
                               {
-                                 skills.length > 0 ? (
+                                 skills?.length > 0 ? (
                                     <div className='d-flex flex-row flex-wrap p-4'>
-                                       {skills.map((skill) => <div className={style.skill + ' mr-2'}>{skill + "  "} <img src={x} alt="" onClick={() => handleDeleteSkill(skill)} className={style.xbutton}/></div>)}
+                                       {skills.map((skill) => <div className={style.skill + ' mr-2'}>{skill + "  "} <img src={x} alt="" onClick={() => handleDeleteSkill(skill)} className={style.xbutton} /></div>)}
                                     </div>
                                  ) : " "
                               }
 
                               <div className='p-4 d-flex flex-row'>
-                                 <input type="text" onChange={(e) => setSkill(e.target.value)} value={skill}/><button className={style.yellow + ' ml-3'} onClick={() => handleAddSkill()}>Simpan</button>
+                                 <input type="text" onChange={(e) => setSkill(e.target.value)} value={skill} /><button className={style.yellow + ' ml-3'} onClick={() => handleAddSkill()}>Simpan</button>
                               </div>
                            </div>
-                              {
-                                 experience.length > 0 ? (
+                           {
+                              experience.length > 0 ? (
                                  <div className={style.form + " p-4"}>
                                     <h3 className='p-4'>Pengalaman Kerja</h3>
                                     <hr />
@@ -320,9 +329,9 @@ const Edit = () => {
                                           }
                                        </tbody>
                                     </table>
-                                    </div>   
-                                 )  : ""
-                              }
+                                 </div>
+                              ) : ""
+                           }
                            <div className={style.form}>
                               <h3 className='p-4'>Pengalaman Kerja</h3>
                               <hr />
@@ -332,21 +341,22 @@ const Edit = () => {
                                  <div className='d-flex flex-row'>
                                     <div className='w-50'>
                                        <p htmlFor="job">Nama Perusahaan</p>
-                                       <input type="text" name="namecompany" value={exp.namecompany} onChange={(e) => handleChangeExp(e)}/>
+                                       <input type="text" name="namecompany" value={exp.namecompany} onChange={(e) => handleChangeExp(e)} />
                                     </div>
                                     <div className='w-50 ml-3'>
                                        <p htmlFor="job">Bulan/Tahun</p>
-                                       <input type="text" name="monthyear" value={exp.monthyear} onChange={(e) => handleChangeExp(e)}/>
+                                       <input type="text" name="monthyear" value={exp.monthyear} onChange={(e) => handleChangeExp(e)} />
                                     </div>
                                  </div>
                                  <p htmlFor="deskripsi">Deskripsi singkat</p>
-                                 <input className={style.dual} type="text" name="jobdescription" value={exp.jobdescription} id="" onChange={(e) => handleChangeExp(e)}/>
+                                 <input className={style.dual} type="text" name="jobdescription" value={exp.jobdescription} id="" onChange={(e) => handleChangeExp(e)} />
                                  <hr className='my-3' />
-                                 <button className='px-4' onClick={handleAddExp}>Tambah Pengalaman Kerja</button>
+                                 <button className='px-4' onClick={handleAddExp} disabled={exp.position === '' ||
+                                    exp.namecompany === '' ||   exp.monthyear === '' || exp.jobdescription === ''}>Tambah Pengalaman Kerja</button>
                               </div>
                            </div>
                            {
-                                 portfolio?.length > 0 ? (
+                              portfolio?.length > 0 ? (
                                  <div className={style.form + " p-4"}>
                                     <h3 className='p-4'>Portfolio</h3>
                                     <hr />
@@ -366,10 +376,10 @@ const Edit = () => {
                                                 <tr>
                                                    <th scope="row">{index + 1}</th>
                                                    <td><img src={data.image[0]} alt="" style={{
-                                                      width : '50px',
-                                                      height : "50px",
-                                                      borderRadius : '9px'
-                                                   }}/></td>
+                                                      width: '50px',
+                                                      height: "50px",
+                                                      borderRadius: '9px'
+                                                   }} /></td>
                                                    <td>{data.nameapps}</td>
                                                    <td>{data.type}</td>
                                                    <td><button className='btn btn-danger btn-sm' onClick={() => handleDeletePorto(data.idportfolio)} style={{
@@ -381,21 +391,21 @@ const Edit = () => {
                                           }
                                        </tbody>
                                     </table>
-                                    </div>   
-                                 )  : ""
-                              }
+                                 </div>
+                              ) : ""
+                           }
                            <div className={style.form}>
                               <h3 className='p-4'>Portofolio</h3>
                               <hr />
                               <div className='p-4'>
                                  <p htmlFor="nama">Nama Aplikasi</p>
-                                 <input type="text" value={porto.nameapps} name="nameapps" onChange={(e) => handleChangePorto(e)}/>
+                                 <input type="text" value={porto.nameapps} name="nameapps" onChange={(e) => handleChangePorto(e)} />
                                  <p htmlFor="nama">Link Repository</p>
-                                 <input type="text" value={porto.respository} name="respository" onChange={(e) => handleChangePorto(e)}/>
+                                 <input type="text" value={porto.respository} name="respository" onChange={(e) => handleChangePorto(e)} />
                                  <p htmlFor="nama">Type Portfolio</p>
                                  <div className='d-flex flex-row'>
                                     <div className={"w-25 d-flex align-items-center"}>
-                                       <input type="radio" name="type" value="mobile" id="mobile" onClick={e => handleChangePorto(e)}/><label htmlFor="mobile" className='ml-3'>Aplikasi mobile</label>
+                                       <input type="radio" name="type" value="mobile" id="mobile" onClick={e => handleChangePorto(e)} /><label htmlFor="mobile" className='ml-3'>Aplikasi mobile</label>
                                     </div>
                                     <div className={"w-25 d-flex align-items-center"}>
                                        <input type="radio" name="type" value="website" id="web" onClick={e => handleChangePorto(e)} /><label htmlFor="web" className='ml-3'>Aplikasi Web</label>
@@ -403,28 +413,28 @@ const Edit = () => {
                                  </div>
                                  <p>Upload Gambar</p>
                                  <div style={{
-                                    width : "100%",
-                                    height : "200px",
-                                    border : "2px dashed #e2e2e2",
-                                    overflow : 'hidden',
-                                    borderRadius : '20px',
-                                    display : 'flex',
-                                    position : "relative"
+                                    width: "100%",
+                                    height: "200px",
+                                    border: "2px dashed #e2e2e2",
+                                    overflow: 'hidden',
+                                    borderRadius: '20px',
+                                    display: 'flex',
+                                    position: "relative"
                                  }}>
                                     <input type="file" accept='image/*' style={{
-                                       width : "100%",
-                                       position : "absolute",
-                                       height : "100%",
-                                       opacity : 0,
-                                       zIndex : 9
-                                    }} onChange={(e) => handleImage2(e)}/>
-                                    <img src={image2?.preview || drag} alt=""  style={{
+                                       width: "100%",
+                                       position: "absolute",
+                                       height: "100%",
+                                       opacity: 0,
+                                       zIndex: 9
+                                    }} onChange={(e) => handleImage2(e)} />
+                                    <img src={image2?.preview || drag} alt="" style={{
                                        margin: 'auto',
                                        width: '100%'
-                                    }}/>
+                                    }} />
                                  </div>
-                                 <hr className='my-4'/>
-                                 <button className='px-4' onClick={handleSubmitPorto}>Tambah Portofolio</button>
+                                 <hr className='my-4' />
+                                 <button className='px-4' onClick={handleSubmitPorto} disabled={porto.nameapp == '' || porto.respository == "" || porto.type == ""}>Tambah Portofolio</button>
                               </div>
                            </div>
                         </div>
