@@ -38,7 +38,7 @@ const LoginPekerja = () => {
         </div>
         <div className='col-6 d-flex flex-column justify-content-center p-5 pr-8'>
           <h1>Halo, Pewpeople</h1>
-          <p className='mb-5 text-muted'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque distinctio tenetur ullam vel eos ea soluta corrupti expedita. Esse, eum!</p>
+          <p className='mb-5 text-muted'>Silahkan daftarkan diri anda sebagai Developers terbaik kami,</p>
           <label htmlFor="" className='d-block'>
             <span className='d-block text-muted'>Email :</span>
             <input type="text" name="email" onChange={(e) => handleChange(e)} placeholder='Masukkan email anda' className={style.input+" my-2 pl-4"} />
