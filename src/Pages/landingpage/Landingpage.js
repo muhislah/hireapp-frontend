@@ -7,17 +7,19 @@ import check from './check.svg'
 import yellowcheck from './yellowcheck.svg'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../Components/module/Footer/Footer'
+import Header from '../../Components/module/Header/Header'
 
 const LandingPage = () => {
    const navigate = useNavigate()
   return (
    <>
+   <Header  />
     <div className={style.container}>
       <div className={style.section+' row'}>
          <div className='col-md-6 col-sm-12 col-xs-12 d-flex flex-column justify-content-center'>
             <h1 className='font-weight-bold d-inline-block w-75'>Talenta terbaik negri untuk perubahan revolusi 4.0</h1>
             <p className='text-muted'>Perubahan di era 4.0 yang sangat pesat membutuhkan sumber daya manusia yang berkembang pesat pula</p>
-            <button className={style.button} onClick={() => navigate('/login')}>Mulai Sekarang</button>
+            <button className={style.button} onClick={() => navigate('/company/login')}>Mulai Sebagai Company</button>
          </div>
          <div className='col-md-6 col-sm-12 col-xs-12'>
             <img className='w-100' src={talenta} alt="talenta"/>

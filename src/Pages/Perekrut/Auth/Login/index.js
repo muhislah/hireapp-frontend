@@ -55,7 +55,7 @@ const Login = () => {
           </label>
           <p className='ml-auto'>Forgot Password</p>
           <button className={style.button} onClick={(e) => handleLogin(e)}>Masuk</button>
-          <p className='mt-5 text-center'>Anda belum punya akun ? <Link to="/register">Daftar disini</Link></p>
+          <p className='mt-5 text-center'>Anda belum punya akun ? <Link to="/company/register">Daftar disini</Link></p>
         </div>
       </div>
     </div>
