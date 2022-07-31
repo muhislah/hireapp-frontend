@@ -92,7 +92,7 @@ Contributions are what make the open source community such an amazing place to b
 
 | Hire | History |
 | ------------- | ------------- |
-| ![profile](/images/hire.png?raw=true " ") | ![receiver](/images/historycompany.png?raw=true " ") |
+| ![profile](/images/hire.png?raw=true " ") | ![receiver](/images/Hirepage.png?raw=true " ") |
 
 | Edit Profile | Edit Profile Company |
 | ------------- | ------------- |
@@ -100,7 +100,7 @@ Contributions are what make the open source community such an amazing place to b
 
 | Landing Page | Search |
 | ------------- | ------------- |
-| ![profile](/images/landing.png?raw=true " ") | ![receiver](/images/search.png?raw=true " ") |
+| ![profile](/images/landing.png?raw=true " ") | ![receiver](/images/pagehome.png?raw=true " ") |
 
 
 <!-- RELATED PROJECT -->
