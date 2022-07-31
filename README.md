@@ -92,7 +92,7 @@ Contributions are what make the open source community such an amazing place to b
 
 | Hire | History |
 | ------------- | ------------- |
-| ![profile](/images/hire.png?raw=true " ") | ![receiver](/images/Hirepage.png?raw=true " ") |
+| ![profile](/images/Hirepage.png?raw=true " ") | ![receiver](/images/history.png?raw=true " ") |
 
 | Edit Profile | Edit Profile Company |
 | ------------- | ------------- |
