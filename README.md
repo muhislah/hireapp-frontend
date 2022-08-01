@@ -88,15 +88,15 @@ Contributions are what make the open source community such an amazing place to b
 
 | Profile | Company Profile |
 | ------------- | ------------- |
-| ![chat](/images/experience.png?raw=true " ") | ![edit](/images/company.png?raw=true " ") |
+| ![chat](/images/profiles.png?raw=true " ") | ![edit](/images/company.png?raw=true " ") |
 
 | Hire | History |
 | ------------- | ------------- |
-| ![profile](/images/Hirepage.png?raw=true " ") | ![receiver](/images/history.png?raw=true " ") |
+| ![profile](/images/Hirepage.png?raw=true " ") | ![receiver](/images/historys.png?raw=true " ") |
 
 | Edit Profile | Edit Profile Company |
 | ------------- | ------------- |
-| ![profile](/images/editprofile.png?raw=true " ") | ![receiver](/images/editcompany.png?raw=true " ") |
+| ![profile](/images/updateemployees.png?raw=true " ") | ![receiver](/images/editcompany.png?raw=true " ") |
 
 | Landing Page | Search |
 | ------------- | ------------- |
