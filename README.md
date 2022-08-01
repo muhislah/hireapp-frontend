@@ -100,7 +100,7 @@ Contributions are what make the open source community such an amazing place to b
 
 | Landing Page | Search |
 | ------------- | ------------- |
-| ![profile](/images/landing.png?raw=true " ") | ![receiver](/images/pagehome.png?raw=true " ") |
+| ![profile](/images/landing.png?raw=true " ") | ![receiver](/images/searchfix.png?raw=true " ") |
 
 
 <!-- RELATED PROJECT -->
