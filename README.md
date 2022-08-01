@@ -84,7 +84,7 @@ Contributions are what make the open source community such an amazing place to b
 ## Screenshot
 | Login Page | Register Page |
 | ------------- | ------------- |
-| ![login](/images/login.png?raw=true " ") | ![register](/images/register.png?raw=true " ") |
+| ![login](/images/login.png?raw=true " ") | ![register](/images/React App.png?raw=true " ") |
 
 | Profile | Company Profile |
 | ------------- | ------------- |
