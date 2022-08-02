@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Peworld Hirejobs</h3>
+  <p align="center">
+    <image align="center" width="200" src='./images/peworld.jpg' />
+  </p>
 
-## Available Scripts
+  <p align="center">
+    <br />
+    <a href="https://github.com/muhislah/hireapp-frontend.git"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://hireapp-frontend.vercel.app/">View Demo</a>
+  </p>
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Related Project](#related-project)
+* [Screenshot](#screenshot)
+* [Contact](#contact)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Peworld Hirejobs is web base application, where worker and company met. Worker can share their skills, portfolio and experience, company can hire worker to their project. and this app use Rest API from [hirejobs restapi](https://hire-jobs.herokuapp.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Built With
 
-### `npm run eject`
+* [Node JS](https://nodejs.org/en/docs/)
+* [React JS](https://reactjs.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- GETTING STARTED -->
+## Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+This is an example of how to list things you need to use the software and how to install them.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [nodejs](https://nodejs.org/en/download/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+1. Clone the repo
+```sh
+git clone https://github.com/muhislah/hireapp-frontend.git
+```
+2. Install NPM packages
+```sh
+npm install
+```
+3. Add .env file at root folder project, and add following
+```sh
+REACT_APP_BACKEND_API = https://hire-jobs.herokuapp.com // or use your own
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+<!-- CONTRIBUTING -->
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Making a Progressive Web App
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b your/branch`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/yourbranch`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- SCREENSHOT -->
+## Screenshot
+| Login Page | Register Page |
+| ------------- | ------------- |
+| ![login](/images/login.png?raw=true " ") | ![register](/images/regisFix.png?raw=true " ") |
 
-### Advanced Configuration
+| Profile | Company Profile |
+| ------------- | ------------- |
+| ![chat](/images/profiles.png?raw=true " ") | ![edit](/images/company.png?raw=true " ") |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Hire | History |
+| ------------- | ------------- |
+| ![profile](/images/Hirepage.png?raw=true " ") | ![receiver](/images/historys.png?raw=true " ") |
 
-### Deployment
+| Edit Profile | Edit Profile Company |
+| ------------- | ------------- |
+| ![profile](/images/updateemployees.png?raw=true " ") | ![receiver](/images/editcompany.png?raw=true " ") |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+| Landing Page | Search |
+| ------------- | ------------- |
+| ![profile](/images/landing.png?raw=true " ") | ![receiver](/images/searchfix.png?raw=true " ") |
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- RELATED PROJECT -->
+## Related Project
+* [`Peworld Demo`](https://hireapp-frontend.vercel.app/landingpage)
+* [`Peworld Rest API`](https://hire-jobs.herokuapp.com/)
+* [`Peworld Rest API Repository`](https://github.com/muhislah/hireapp-backend)
+
+
+<!-- CONTACT -->
+## Contact
+
+Contributors names and contact info
+
+* Frontend Developers
+  * Muhamad Islahuddin [@muhislah](https://github.com/muhislah) * Product Owner
+  * Irfan Julian Ibarahim [@irfanjulian](https://github.com/Irfanjulian)
+* Backend Developers
+  * Wahyu Dwi Purwanto [@wahyuwww](https://github.com/wahyuwww)
+  * Sendi Alamsyah [@sendialamsyah](https://github.com/sendialamsyah)
