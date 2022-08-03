@@ -35,7 +35,7 @@
 ## About The Project
 
 
-Peworld Hirejobs is web base application, where worker and company met. Worker can share their skills, portfolio and experience, company can hire worker to their project. and this app use Rest API from [hirejobs restapi](https://hire-jobs.herokuapp.com/)
+Peworld Hirejobs is web base application, where worker and company met. Worker can share their skills, portfolio and experience, company can hire worker to their project. This app use Rest API from [hirejobs restapi](https://hire-jobs.herokuapp.com/)
 
 ### Built With
 
